@@ -11,9 +11,11 @@
   },
   "institutions": {
     "foreign_billion_twd": -3025.55,
-    "total_billion_twd": -3700.76
+    "total_billion_twd": -3700.76,
+    "investment_trust_billion_twd": 283.03,
+    "dealers_billion_twd": -958.24
   },
-  "usd_twd": 32.313,
+  "usd_twd": 32.265,
   "tsmc": {
     "close": 2440,
     "change_pct": -2.01
@@ -35,11 +37,6 @@
   ],
   "events": [
     {
-      "date": "2026-10-15",
-      "importance": "high",
-      "event": "美國9月PPI"
-    },
-    {
       "date": "2026-10-16",
       "importance": "medium",
       "event": "美國9月進出口物價指數"
@@ -48,6 +45,48 @@
       "date": "2026-10-20",
       "importance": "high",
       "event": "台灣9月外銷訂單"
+    },
+    {
+      "date": "2026-10-22",
+      "importance": "medium",
+      "event": "美國景氣領先指標",
+      "time_status": "待確認"
+    }
+  ],
+  "usd_twd_status": "台北外匯市場正式收盤",
+  "as_of": "2026-10-15T21:48:00+08:00",
+  "macro_events": [
+    {
+      "date": "2026-10-15",
+      "event": "美國9月PPI",
+      "actual_mom_pct": 1.3,
+      "reported_after_twse_close": true
+    }
+  ],
+  "sources": [
+    {
+      "name": "TWSE",
+      "url": "https://www.twse.com.tw/zh/"
+    },
+    {
+      "name": "中央社大盤",
+      "url": "https://www.cna.com.tw/news/afe/202610150125.aspx"
+    },
+    {
+      "name": "中央社三大法人",
+      "url": "https://www.cna.com.tw/news/afe/202610150182.aspx"
+    },
+    {
+      "name": "中央社台幣收盤",
+      "url": "https://www.cna.com.tw/news/afe/202610150200.aspx"
+    },
+    {
+      "name": "Reuters台積電",
+      "url": "https://www.reuters.com/world/asia-pacific/tsmc-q3-profit-jumps-69-record-beating-expectations-2026-10-15/"
+    },
+    {
+      "name": "BLS 9月PPI",
+      "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm"
     }
   ]
 }
