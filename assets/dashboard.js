@@ -38,6 +38,7 @@
         card.append(hdr,elm("h3",null,e.event||"待確認"),elm("div","small-label",e.time_status?"時間待確認":"未來觀察事件"));container.append(card)
       })}
     set("event-count",events.length+" 項事件");
+    const prog=$("event-progress");if(prog)prog.style.width=Math.min(100,events.length*25)+"%";
   }
   function renderHistory(history,filter=""){
     const records=$("records");if(!records)return;
@@ -56,7 +57,8 @@
   }
   function renderCounts(history){
     set("total-count",String(history.length));set("donut-total",String(history.length));set("all-count",history.length+" 篇");
-    const month=new Date().toLocaleDateString("en-CA",{timeZone:"Asia/Taipei",year:"numeric",month:"2-digit"}).slice(0,7);
+    const parts=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Taipei",year:"numeric",month:"2-digit"}).formatToParts(new Date());
+    const month=parts.find(p=>p.type==="year").value+"-"+parts.find(p=>p.type==="month").value;
     const monthCount=history.filter(x=>(x.date||"").startsWith(month)).length;
     set("month-count",String(monthCount));set("month-count-foot",monthCount+" 篇 / 共 "+history.length+" 篇");
     const p=history.length?Math.round(monthCount/history.length*100):0;
