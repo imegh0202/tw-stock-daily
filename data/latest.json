@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-15",
+  "trading_day": true,
+  "market_state": "風險顯著升高",
+  "risk_level": "high",
+  "taiex": {
+    "close": 46969.87,
+    "change_points": -1655.96,
+    "change_pct": -3.41,
+    "turnover_billion_twd": 13197.7
+  },
+  "institutions": {
+    "foreign_billion_twd": -3025.55,
+    "total_billion_twd": -3700.76
+  },
+  "usd_twd": 32.313,
+  "tsmc": {
+    "close": 2440,
+    "change_pct": -2.01
+  },
+  "strong_sectors": [
+    "金融",
+    "電信",
+    "食品"
+  ],
+  "weak_sectors": [
+    "半導體",
+    "AI電子",
+    "記憶體・封測"
+  ],
+  "risks": [
+    "外資單日賣超3,025.55億元",
+    "市場廣度明顯惡化",
+    "通膨與利率造成科技股估值壓力"
+  ],
+  "events": [
+    {
+      "date": "2026-10-15",
+      "importance": "high",
+      "event": "美國9月PPI"
+    },
+    {
+      "date": "2026-10-16",
+      "importance": "medium",
+      "event": "美國9月進出口物價指數"
+    },
+    {
+      "date": "2026-10-20",
+      "importance": "high",
+      "event": "台灣9月外銷訂單"
+    }
+  ]
+}
