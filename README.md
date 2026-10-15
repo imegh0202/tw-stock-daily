@@ -1,51 +1,47 @@
-# 📊 台股每日觀察｜GitHub HTML
+# 📊 台股每日觀察｜投資日報戰情室
 
-台股每個交易日盤後的市場觀察日報。**GitHub Pages 是閱讀入口，GitHub Repository 保存完整歷史 HTML 與 JSON。**
+使用 GitHub Pages 免費展示台股盤後日報。**首頁是永久儀表板**，完整日報依日期保存獨立 HTML，歷史清單與統計依 JSON 自動顯示。
 
-## 閱讀網址
+## 公開閱讀
 
-- [最新日報（GitHub Pages）](https://imegh0202.github.io/tw-stock-daily/)：需先到 Repository → Settings → Pages 啟用，網址尚待部署確認。
-- [歷史日報索引（GitHub Pages）](https://imegh0202.github.io/tw-stock-daily/archive.html)
-- [GitHub Repository](https://github.com/imegh0202/tw-stock-daily)
+- **[固定入口｜台股日報戰情室](https://imegh0202.github.io/tw-stock-daily/)**
+- [歷史日報查詢](https://imegh0202.github.io/tw-stock-daily/archive.html)
+- [原始碼 Repository](https://github.com/imegh0202/tw-stock-daily)
 
-## GitHub Pages 啟用
-
-1. 將 Repository 設為 Public（已完成）。
-2. 到 [Settings → Pages](https://github.com/imegh0202/tw-stock-daily/settings/pages)。
-3. Source 選 **Deploy from a branch**。
-4. Branch 選 `main`，Folder 選 `/(root)`，按 **Save**。
-5. 等 GitHub 完成部署，查看 [Actions](https://github.com/imegh0202/tw-stock-daily/actions) 的 Pages 建置紀錄。
-
-> 只修改 Public 不等於啟用 Pages。頁面若持續 404，請先確認 Pages 發布來源與 Actions 建置狀態。
-
-## 資料結構
+## 目前檔案
 
 ```text
-index.html               # 最新一期完整日報
-archive.html             # 歷史日報搜尋頁
-reports/YYYY-MM-DD.html  # 每日歷史日報
-data/latest.json         # 最新一期結構化資料
+index.html               # 固定入口儀表板，排程不可覆寫
+archive.html             # 獨立歷史日報搜尋頁
+assets/dashboard.css     # 入口網站（參考使用者提供的儀表板截圖）樣式
+assets/dashboard.js      # 從 JSON 動態載入風險圖表、連結與日報清單
+assets/style.css         # 每日完整報告共用 CSS
+reports/YYYY-MM-DD.html  # 每日獨立報告
 data/YYYY-MM-DD.json     # 每日結構化資料
-data/history.json        # 歷史索引清單（依日期去重）
-assets/style.css         # 全站共用手機版樣式
+data/latest.json         # 最新日報，入口首頁使用
+data/history.json        # 歷史清單（date 去重），首頁與 archive 都會讀取
 ```
 
-## 每日排程預期流程
+## 每日更新規則
 
-1. ChatGPT 排程「台股日報｜GitHub HTML」週一～週五台北時間約 17:00 執行。
-2. 查最新行情、法人、正式 USD/TWD、權值股、族群與已確認未來事件。
-3. 產生完整的 HTML 日報和當日 JSON，先保存歷史，再更新 `index.html` 與 `data/latest.json`。
-4. 更新 `data/history.json`，同日期只記一筆。
-5. 回覆當日 HTML 連結。是否收到手機推播或 Email 由 ChatGPT 通知設定決定。
+1. ChatGPT「台股日報｜GitHub HTML」平日台灣時間約 17:00 執行（排程為彈性執行，週末目前沒有啟用）。
+2. 查證收盤資料、法人、匯率、主要事件，產生 `reports/YYYY-MM-DD.html` 和當日 JSON。
+3. 更新 `data/latest.json` 和 `data/history.json`，保留所有已建立的歷史檔案。
+4. **不要更新 `index.html`**：首頁 JavaScript 會在載入時讀取 JSON，立即展示最新日報。
+5. 使用者只需要收到固定入口網站網址。
 
-**注意：此排程寫入 GitHub 的流程尚需在下一次排程執行後驗證，不能只依任務設定就認定自動發布已成功。**
+> GitHub 連線可以手動寫入，但每日排程是否能成功使用該連線，仍需等首次排程實際執行驗證。不要把「排程已設定」等同於「自動化已驗證」。
 
-## 資料原則
+## Google Sheets（GAS 稍後設定）
 
-- 日期與資料時點必須清楚。
-- 對未取得正式收盤的數字，顯示待確認，而不是拿盤中或舊數字冒充。
-- 網頁上應列出實際查證的來源網址。
-- 不預測隔日漲跌；未來情境只列基準、轉強與轉弱條件。
-- 不寫入 Notion，不使用付費 OpenAI API 產生日報。
+- Google 試算表 `tw-stock-daily` 已建立「日報索引」欄位，包含日期、星期、報告標題、HTML/JSON 網址、市場狀態、風險等級、指數、漲跌幅、成交值、外資、匯率、發布狀態、同步時間、備註。
+- GAS **尚未啟用**。未來建議由 Apps Script 定時讀取 `data/history.json` 與各日 `data/YYYY-MM-DD.json`，按照日期去重並更新試算表；不必新增任何付費後端。
+- **不要將私人 Google Sheets 編輯權限或公開編輯連結嵌入 Public 網站。** 請將 Google Sheets 分享權限設定為「限制存取」或至少改成僅檢視。
 
-內容僅供研究及風險教育，不構成投資建議。
+## 資料品質與安全
+
+- 優先使用官方原始資料，列出可點擊來源與觀測時間；未查證值留空。
+- 金融市場有波動與本金損失風險；本站內容為教育與風險觀察，非投資建議。
+- 公開 Repository 僅放 HTML/CSS/JS/JSON，不要保存個人帳密、Token、Webhook 或 `.env`。
+- Pages 網站內容公開，不代表試算表也需要公開。
+
