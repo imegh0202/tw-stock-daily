@@ -23,7 +23,7 @@
     if(badgeEl){badgeEl.className="pill "+badge(level);badgeEl.textContent=state}
     const h=history.find(x=>x.date===v.date)||history[0];
     const href=safeReportUrl(h?.url)|| (v.date?"./reports/"+v.date+".html":"./archive.html");
-    ["latest-report-link","top-latest-link","aside-latest-link"].forEach(id=>{const a=$(id);if(a)a.href=href});
+    ["latest-report-link"].forEach(id=>{const a=$(id);if(a)a.href=href});
     set("data-asof",v.as_of?String(v.as_of).replace("T"," ").slice(0,16):"待核對");
     const snippets=Array.isArray(v.risks)?v.risks:[];
     const box=$("risk-list");if(box){box.replaceChildren();if(!snippets.length){box.append(elm("p","empty","尚無今日風險摘要，請閱讀完整日報。"))}
@@ -43,17 +43,27 @@
   function renderHistory(history,filter=""){
     const records=$("records");if(!records)return;
     records.replaceChildren();
+    // 最新日報有獨立的主按鈕；此處只顯示較早日期，避免兩個入口指向同一篇。
+    const previous=history.slice(1);
     const q=String(filter).trim().toLowerCase();
-    const shown=history.filter(r=>(r.date+" "+r.title+" "+r.market_state).toLowerCase().includes(q)).slice(0,8);
-    if(!shown.length){records.append(elm("p","empty",history.length?"沒有符合條件的日報。":"尚無歷史報告。"));return}
+    const shown=previous.filter(r=>(r.date+" "+r.title+" "+r.market_state).toLowerCase().includes(q)).slice(0,8);
+    if(!shown.length){
+      records.append(elm("p","empty",q?"沒有其他符合條件的歷史日報。":history.length?"目前只有最新日報；新日報發布後，之前的紀錄會出現在這裡。":"尚無歷史報告。"));
+      return;
+    }
     shown.forEach(r=>{
-      const line=elm("div","record"),date=elm("div","record-date",fmtDay(r.date).slice(5)),content=elm("div");
-      content.append(elm("h3",null,r.title||fmtDay(r.date)));
-      const p=elm("p",null,r.market_state||"市場狀態待確認");
-      content.append(p);
-      const a=elm("a",null,"查看報告 ↗");a.href=safeReportUrl(r.url)||"./archive.html";
-      line.append(date,content,a);records.append(line);
-    })
+      const href=safeReportUrl(r.url);
+      if(!href)return;
+      const line=elm("a","record");
+      line.href=href;
+      line.setAttribute("aria-label","閱讀 "+(r.title||fmtDay(r.date))+" 完整日報");
+      const date=elm("span","record-date",fmtDay(r.date).slice(5));
+      const content=elm("span","record-detail");
+      content.append(elm("strong","record-title",r.title||fmtDay(r.date)));
+      content.append(elm("span","record-status",r.market_state||"市場狀態待確認"));
+      line.append(date,content,elm("span","record-arrow","↗"));
+      records.append(line);
+    });
   }
   function renderCounts(history){
     set("total-count",String(history.length));set("donut-total",String(history.length));set("all-count",history.length+" 篇");
