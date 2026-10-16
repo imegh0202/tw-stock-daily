@@ -1,5 +1,5 @@
 :root{
-  color-scheme:light dark;
+  color-scheme:light;
   --bg:#f5f7fb;
   --panel:#ffffff;
   --panel-soft:#f8fafc;
@@ -96,10 +96,16 @@ summary{cursor:pointer;font-weight:750}
   .section{padding:18px}
   table{font-size:13px}
 }
-@media(prefers-color-scheme:dark){
-  :root{
+:root[data-theme="dark"]{
     --bg:#0c111b;--panel:#121a27;--panel-soft:#172131;--text:#eef2f7;--muted:#98a2b3;--line:#253247;--accent:#8fa7ff;
     --shadow:0 8px 28px rgba(0,0,0,.22)
   }
-  .hero{background:linear-gradient(135deg,#251923,#542431)}
-}
+:root[data-theme="dark"] .hero{background:linear-gradient(135deg,#251923,#542431)}
+
+/* Shared manual theme toggle for report/archive pages */
+.header-actions{display:flex;gap:11px;align-items:center}
+.theme-switch{display:inline-flex;gap:7px;align-items:center;padding:7px 11px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--text);font:inherit;font-size:12px;cursor:pointer}
+.theme-switch:hover,.theme-switch:focus-visible{border-color:var(--accent)}
+.theme-switch .theme-icon{font-size:17px;line-height:1}
+.theme-switch .theme-label{font-weight:650}
+@media(max-width:520px){.brand{flex-wrap:wrap;gap:9px}.header-actions{gap:8px}}
