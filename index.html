@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#f3f5f8">
 <title>台股每日觀察｜投資日報戰情室</title>
 <meta name="description" content="每日台股盤後觀察入口網站，快速閱讀最新日報、歷史市場紀錄、風險摘要與重要事件。">
+<script src="./assets/theme.js"></script>
 <link rel="stylesheet" href="./assets/dashboard.css">
 </head>
 <body>
@@ -14,12 +15,12 @@
     <a class="brand-mark" href="./index.html" title="台股每日觀察" aria-label="返回入口首頁">↗</a>
     <div class="rail-links">
       <a class="current" href="#dashboard" title="總覽" aria-label="總覽"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></a>
-      <a href="#history" title="日報紀錄" aria-label="日報紀錄"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg></a>
-      <a href="#events" title="事件日曆" aria-label="事件日曆"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></a>
-      <a href="#risks" title="市場觀察" aria-label="市場觀察"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></a>
-      <a href="#system" title="系統狀態" aria-label="系統狀態"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M2 12h3M19 12h3M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2"/></svg></a>
+      <a href="./archive.html" title="歷史日報" aria-label="歷史日報"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg></a>
+      <a href="#resources" title="管理資源" aria-label="管理資源"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10M15 10v10"/></svg></a>
     </div>
-    <div class="rail-end"><a href="https://github.com/imegh0202/tw-stock-daily" target="_blank" rel="noopener noreferrer" title="GitHub Repository" aria-label="GitHub Repository"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg></a></div>
+    <div class="rail-end">
+      <button type="button" class="theme-toggle" data-theme-toggle title="切換深色模式" aria-label="切換深色模式"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">深色</span></button>
+    </div>
   </nav>
   <aside class="aside-card" aria-label="日報索引側欄">
     <div class="aside-header"><h2>Report Library</h2><a class="mini-action" href="./archive.html" title="查看全部日報">⊕ 全部</a></div>
@@ -36,6 +37,7 @@
     <div class="tree-sub"><span>● 其他觀察日</span><strong id="other-count">—</strong></div>
     <div class="tree-title">⌄　快捷入口</div>
     <div class="tree-sub"><a href="./archive.html">歷史日報總覽 ↗</a></div>
+    <div class="tree-sub"><a href="#resources">Google 試算表／管理連結 ↗</a></div>
     <div class="tree-sub"><a id="aside-latest-link" href="./reports/2026-10-15.html">最新完整報告 ↗</a></div>
     <div class="aside-hint"><strong>固定入口網站</strong><p>每個交易日保留獨立 HTML。即使日期改變，此頁網址仍固定。</p><a href="https://github.com/imegh0202/tw-stock-daily" target="_blank" rel="noopener noreferrer">前往 GitHub 管理 ↗</a></div>
   </aside>
@@ -96,6 +98,24 @@
         <p class="small-label" style="margin:15px 0 0">最新存檔更新時間：<span id="data-asof">—</span><br>GitHub Pages 公開網站不會要求訪客登入 GitHub。</p>
       </section>
     </div>
+    <section class="panel resources-panel" id="resources" aria-labelledby="heading-resources">
+      <div class="cards-title">
+        <div><h2 id="heading-resources">管理資源</h2><div class="panel-sub">常用工具與來源入口 · 不在網站展示私人試算表內容</div></div>
+      </div>
+      <div class="resource-grid">
+        <a class="resource-item" href="https://docs.google.com/spreadsheets/d/1wcKFIWK7hEQBlcIJccvOsdykj1-mwLb2EEnhR-_G_vQ/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+          <span class="resource-mark sheet-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10M15 10v10"/></svg></span>
+          <span class="resource-body"><strong>Google 試算表</strong><small>tw-stock-daily · 日報索引</small><em>權限：限制存取，僅授權帳號可開啟</em></span>
+          <span class="resource-arrow">↗</span>
+        </a>
+        <a class="resource-item" href="https://github.com/imegh0202/tw-stock-daily" target="_blank" rel="noopener noreferrer">
+          <span class="resource-mark github-mark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M10 14L21 3"/><path d="M20 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6"/></svg></span>
+          <span class="resource-body"><strong>GitHub Repository</strong><small>原始碼 · 每日 HTML / JSON · 部署來源</small><em>公開檢視；編輯需 GitHub 授權</em></span>
+          <span class="resource-arrow">↗</span>
+        </a>
+      </div>
+      <p class="resource-note">提醒：這是 Public 網站，因此 Google 試算表網址也會公開可見；但「限制存取」仍會阻擋未授權者讀取表格內容。GAS 尚未設定。</p>
+    </section>
     <footer class="foot">台股每日觀察 · 僅供投資教育與資料整理，不構成投資建議。行情、事件與風險分類請以日報中的來源及更新時間為準。</footer>
   </main>
 </div></div>
