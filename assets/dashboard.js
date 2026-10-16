@@ -81,7 +81,7 @@
     const pctH=high/total*100,pctM=mid/total*100;
     const donut=$("donut");
     if(donut)donut.style.background=history.length?
-      "conic-gradient(#6248e7 0 "+pctH+"%,#83ced9 "+pctH+"% "+(pctH+pctM)+"%,#b9e8cf "+(pctH+pctM)+"% 100%)":
+      "conic-gradient(var(--risk-high) 0 "+pctH+"%,var(--risk-mid) "+pctH+"% "+(pctH+pctM)+"%,var(--risk-other) "+(pctH+pctM)+"% 100%)":
       "conic-gradient(#e7e9f0 0 100%)";
   }
   function setupSheetShortcut(){
