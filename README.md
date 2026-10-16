@@ -6,6 +6,7 @@
 
 - **[固定入口｜台股日報戰情室](https://imegh0202.github.io/tw-stock-daily/)**
 - [歷史日報查詢](https://imegh0202.github.io/tw-stock-daily/archive.html)
+- [投資理財知識庫（八章與術語速查）](https://imegh0202.github.io/tw-stock-daily/guide.html)
 - [原始碼 Repository](https://github.com/imegh0202/tw-stock-daily)
 
 ## 目前檔案
@@ -13,6 +14,8 @@
 ```text
 index.html               # 固定入口儀表板，排程不可覆寫
 archive.html             # 獨立歷史日報搜尋頁
+guide.html               # 投資理財知識庫（8 章 + 術語速查）
+assets/guide.css         # 知識庫響應式樣式
 assets/dashboard.css     # 入口網站（參考使用者提供的儀表板截圖）樣式
 assets/dashboard.js      # 從 JSON 動態載入風險圖表、連結與日報清單
 assets/style.css         # 每日完整報告共用 CSS
