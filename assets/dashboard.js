@@ -74,6 +74,25 @@
       "conic-gradient(#6248e7 0 "+pctH+"%,#83ced9 "+pctH+"% "+(pctH+pctM)+"%,#b9e8cf "+(pctH+pctM)+"% 100%)":
       "conic-gradient(#e7e9f0 0 100%)";
   }
+  function setupSheetShortcut(){
+    const key="tw-stock-daily-sheet-url";
+    const form=$("sheet-settings"),input=$("sheet-link-input"),open=$("sheet-open"),state=$("sheet-state"),setupBtn=$("sheet-setup"),save=$("sheet-save"),clear=$("sheet-clear"),message=$("sheet-message");
+    if(!form||!input||!open||!state||!setupBtn||!save||!clear)return;
+    const valid=(value)=>/^https:\/\/docs\.google\.com\/spreadsheets\/d\/[A-Za-z0-9_-]+(?:\/[^\s]*)?$/.test(value);
+    let url="";try{url=localStorage.getItem(key)||""}catch(_){}
+    function update(){
+      if(url&&valid(url)){open.href=url;open.hidden=false;state.textContent="已在此裝置儲存連結"}else{open.removeAttribute("href");open.hidden=true;state.textContent="尚未在此裝置儲存連結"}
+      input.value=url&&valid(url)?url:"";
+    }
+    setupBtn.addEventListener("click",()=>{form.hidden=!form.hidden;setupBtn.setAttribute("aria-expanded",String(!form.hidden));if(!form.hidden)input.focus()});
+    save.addEventListener("click",()=>{
+      const val=input.value.trim();
+      if(!valid(val)){message.textContent="請貼上有效的 Google Sheets 連結，網址需以 https://docs.google.com/spreadsheets/d/ 開頭。";return}
+      try{localStorage.setItem(key,val);url=val;message.textContent="已儲存在這個瀏覽器，沒有上傳到 GitHub。";update()}catch(_){message.textContent="瀏覽器不允許儲存，請確認未封鎖網站資料。"}
+    });
+    clear.addEventListener("click",()=>{try{localStorage.removeItem(key)}catch(_){}url="";message.textContent="已清除此瀏覽器的試算表連結。";update()});
+    update();
+  }
   async function init(){
     try{
       const [latest,raw]=await Promise.all([getJSON("latest.json"),getJSON("history.json")]);
@@ -89,5 +108,6 @@
       const box=$("records");if(box)box.append(elm("p","empty","目前無法載入最新索引，請前往歷史日報頁查看。"));
     }
   }
+  setupSheetShortcut();
   init();
 })();
