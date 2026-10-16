@@ -25,6 +25,11 @@
   </nav>
   <aside class="aside-card" aria-label="日報索引側欄">
     <div class="aside-header"><h2>Report Library</h2><span class="small-label">日報統計</span></div>
+    <nav class="portal-aside-links" aria-label="入口快速導覽">
+      <a href="./index.html" aria-current="page"><span aria-hidden="true">▦</span>市場總覽</a>
+      <a href="./archive.html"><span aria-hidden="true">▤</span>歷史日報</a>
+      <a href="./guide.html"><span aria-hidden="true">▧</span>投資理財知識庫</a>
+    </nav>
     <div class="aside-kpi"><span>累積日報</span><span>REPORTS</span></div>
     <div class="aside-total"><span id="total-count">1</span> <span style="font-size:14px;color:#8d97a6;font-weight:550">篇</span></div>
     <hr class="line">
@@ -51,7 +56,7 @@
         <div class="overview-layout">
           <div class="donut-container">
             <div id="donut" class="donut" role="img" aria-label="市場風險比例圓環圖"><div class="donut-hole"><span id="donut-total" class="donut-number">1</span><span class="donut-note">日報總數</span></div></div>
-            <div class="legend"><div class="legend-item"><span class="dot d-purple"></span> 高風險日</div><div class="legend-item"><span class="dot d-blue"></span> 中風險日</div><div class="legend-item"><span class="dot d-mint"></span> 其他狀態</div></div>
+            <div class="legend"><div class="legend-item"><span class="dot d-high"></span> 高風險日</div><div class="legend-item"><span class="dot d-medium"></span> 中風險日</div><div class="legend-item"><span class="dot d-other"></span> 其他狀態</div></div>
           </div>
           <div class="overview-stat"><div class="small-label">最新市場觀察</div><div id="latest-risk" class="pill grey" style="margin-top:10px">載入中</div><div class="stat-big" id="latest-date">—</div><div class="stat-description">最新日報包含法人、匯率、族群輪動、未來風險事件與情境分析；完整內容請由右側卡片進入。</div></div>
         </div>
@@ -64,7 +69,7 @@
         </div>
         <div class="quick-grid">
           <div class="quick-card"><h3>本月日報收錄</h3><p class="q-detail"><strong id="month-count-foot">—</strong></p><div class="progress"><div id="month-progress" style="width:0"></div></div><div class="quick-foot">占目前歷史存檔比例</div></div>
-          <div class="quick-card"><h3>未來事件提醒</h3><p class="q-detail" id="event-count">—</p><div class="progress purple"><div id="event-progress" style="width:0%"></div></div><div class="quick-foot">詳見下方事件日曆</div></div>
+          <div class="quick-card"><h3>未來事件提醒</h3><p class="q-detail" id="event-count">—</p><div class="progress event"><div id="event-progress" style="width:0%"></div></div><div class="quick-foot">詳見下方事件日曆</div></div>
         </div>
         <div class="small-label">畫面依 GitHub JSON 呈現，請以日報內所列來源核對行情與事件。</div>
       </section>
