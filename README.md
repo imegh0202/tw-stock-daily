@@ -41,6 +41,13 @@ data/history.json        # 歷史清單（date 去重），首頁與 archive 都
 - GAS **尚未啟用**。未來建議由 Apps Script 定時讀取 `data/history.json` 與各日 `data/YYYY-MM-DD.json`，按照日期去重並更新試算表；不必新增任何付費後端。
 - **不要將私人 Google Sheets 編輯權限或公開編輯連結嵌入 Public 網站。** 請將 Google Sheets 分享權限設定為「限制存取」或至少改成僅檢視。
 
+## 字體與可讀性規範
+
+- **整站最小字級為 14px**：首頁、歷史日報、投資知識庫及每天新產生的報告皆須遵守。小標籤、表格、卡片說明、按鈕、頁腳與手機版也不可小於 14px。
+- 一般閱讀內文建議使用 **16px**，章節標題依層級使用更大的字級。
+- 修改排版時優先透過 `assets/dashboard.css`、`assets/guide.css`、`assets/style.css` 管理字級，不要在新的 HTML／JS 中寫入小於 14px 的 inline `font-size`。
+- 兼顧桌機和手機閱讀：字體變大後，卡片、表格和導覽要適度換行或允許橫向捲動，避免文字被遮住。
+
 ## 資料品質與安全
 
 - 優先使用官方原始資料，列出可點擊來源與觀測時間；未查證值留空。
