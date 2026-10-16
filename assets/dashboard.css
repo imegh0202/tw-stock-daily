@@ -191,3 +191,18 @@ a{text-decoration:none;color:inherit}button,input{font:inherit}button{cursor:poi
  .rail-end .theme-toggle{width:51px;min-height:52px}
  .resource-grid{grid-template-columns:1fr}
 }
+
+/* Local-only Google Sheets shortcut: private spreadsheet URLs do not live in the public repo. */
+.resource-commands{margin-left:auto;display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.resource-btn{border:0;border-radius:8px;padding:7px 11px;background:var(--purple);color:#fff;font-size:11px;font-weight:750;white-space:nowrap;cursor:pointer}
+.resource-btn-light{background:var(--purple-soft);color:var(--purple)}
+.resource-btn:hover{opacity:.88}
+.resource-form{margin-top:12px;padding:16px;background:var(--card);border:1px dashed var(--border);border-radius:11px}
+.resource-form[hidden],.resource-btn[hidden]{display:none!important}
+.resource-form label{display:block;font-weight:700;font-size:12px;margin-bottom:7px}
+.resource-form input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:12px}
+.resource-form-actions{display:flex;gap:8px;flex-wrap:wrap;margin:11px 0 7px}
+.resource-form-actions button{font:inherit;font-size:11px;font-weight:700;padding:8px 12px;border-radius:8px;background:var(--purple);color:white;border:0;cursor:pointer}
+.resource-form-actions button+button{background:var(--purple-soft);color:var(--purple)}
+.resource-form p{margin:7px 0 0;color:var(--muted);font-size:11px}
+:root[data-theme="dark"] .resource-btn-light,:root[data-theme="dark"] .resource-form-actions button+button{background:#393153;color:#cdbaff}
