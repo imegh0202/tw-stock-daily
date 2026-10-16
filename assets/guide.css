@@ -177,3 +177,9 @@
  .kb-section-head{gap:10px}
 }
 @media(max-width:430px){.kb-quick-nav{grid-template-columns:1fr}.kb-topic{min-height:auto}.kb-section h2{font-size:22px}}
+
+/* High-contrast accent text on light cards (WCAG AA for 15px labels). */
+:root:not([data-theme="dark"]) .kb-topic:nth-child(2) .num{color:#116C64}
+:root:not([data-theme="dark"]) .kb-topic:nth-child(3) .num{color:#255F85}
+:root:not([data-theme="dark"]) .kb-topic:nth-child(4) .num{color:#92531D}
+:root:not([data-theme="dark"]) .kb-search:focus{outline-color:#252F60}
