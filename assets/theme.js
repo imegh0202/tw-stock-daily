@@ -9,7 +9,7 @@ function apply(next,save){
  document.documentElement.dataset.theme=mode;
  document.documentElement.style.colorScheme=mode;
  const meta=document.querySelector('meta[name="theme-color"]');
- if(meta)meta.content=mode==="dark"?"#101522":"#f3f5f8";
+ if(meta)meta.content=mode==="dark"?"#111827":"#F5F7FA";
  if(save)try{localStorage.setItem(key,mode)}catch(_){}
  document.querySelectorAll("[data-theme-toggle]").forEach(btn=>{
   const nextMode=mode==="dark"?"淺色":"深色";
