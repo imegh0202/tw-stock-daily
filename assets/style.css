@@ -6,7 +6,7 @@
   --text:#152033;
   --muted:#667085;
   --line:#e4e7ec;
-  --accent:#3157d5;
+  --accent:#F6C543;
   --green:#087a55;
   --yellow:#946200;
   --orange:#b54708;
@@ -30,7 +30,7 @@ a{color:inherit}
 .brand h1{font-size:19px;margin:0}
 .brand .date{font-size:14px;color:var(--muted)}
 .hero{
-  background:linear-gradient(135deg,#241f33,#5d2634);
+  background:linear-gradient(128deg,#252F60,#4053A0);
   color:#fff;
   border-radius:22px;
   padding:26px;
@@ -98,10 +98,10 @@ summary{cursor:pointer;font-weight:750}
   table{font-size:14px}
 }
 :root[data-theme="dark"]{
-    --bg:#0c111b;--panel:#121a27;--panel-soft:#172131;--text:#eef2f7;--muted:#98a2b3;--line:#253247;--accent:#8fa7ff;
+    --bg:#0c111b;--panel:#121a27;--panel-soft:#172131;--text:#eef2f7;--muted:#98a2b3;--line:#253247;--accent:#F6C543;
     --shadow:0 8px 28px rgba(0,0,0,.22)
   }
-:root[data-theme="dark"] .hero{background:linear-gradient(135deg,#251923,#542431)}
+:root[data-theme="dark"] .hero{background:linear-gradient(128deg,#252F60,#313D78)}
 
 /* Shared manual theme toggle for report/archive pages */
 .header-actions{display:flex;gap:11px;align-items:center}
@@ -118,4 +118,85 @@ th,.card-label,.card-sub,.tag,.kicker,.footer,.brand .date,.theme-switch{font-si
  .section{overflow-x:auto}
  table{font-size:14px}
  .brand{flex-wrap:wrap}
+}
+
+/* Research Dashboard palette shared by historical / daily HTML reports.
+   Gold #F6C543 for brand actions, navy + ice blue + teal + warm orange for structure. */
+:root{
+ --bg:#F5F7FA;--panel:#FFFFFF;--panel-soft:#F0F5FC;
+ --text:#172449;--muted:#586783;--line:#DDE4EF;
+ --accent:#F6C543;--navy:#252F60;--teal:#178E83;
+ --ice:#438BBE;--orange:#D88642;
+ --green:#168374;--yellow:#825D13;--red:#B42339;
+ --shadow:0 9px 28px rgba(32,52,91,.055);
+}
+:root[data-theme="dark"]{
+ --bg:#111827;--panel:#202B49;--panel-soft:#263852;
+ --text:#F4F7FF;--muted:#BFCBE2;--line:#344462;
+ --accent:#F6C543;--navy:#E5ECFC;--teal:#63C9B5;--ice:#72B4E2;
+ --orange:#E5A56C;--green:#78DBBD;--yellow:#F6C543;--red:#F1A2B5;
+ --shadow:0 11px 30px rgba(0,0,0,.20);
+}
+body{font-size:16px;line-height:1.8}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#252F60 0%,#313D78 70%,#4053A0 100%);padding:30px 34px;border-radius:22px;box-shadow:0 12px 30px rgba(37,47,96,.14)}
+.hero::before{content:"";position:absolute;right:-130px;top:-160px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(246,197,67,.20),transparent 65%);pointer-events:none}
+.hero .kicker{color:#DDE6F8;opacity:1;font-size:15px}
+.hero .hero-note{font-size:16px;color:#E5ECF9}
+.hero h2{line-height:1.17;overflow-wrap:anywhere}
+.hero .risk-badge{font-size:14px;background:#F6C543;color:#172449;border:1px solid #ECC057}
+.card,.section{border-radius:22px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.card{padding:21px 22px;border-top:4px solid var(--ice);background:#F3F8FC}
+.card:nth-child(2){border-top-color:var(--teal);background:#EDF8F5}
+.card:nth-child(3){border-top-color:#4053A0;background:#F0F4FB}
+.card:nth-child(4){border-top-color:var(--accent);background:#FFF8E6}
+.card-value{font-size:23px;color:#252F60}
+.card-label,.card-sub{font-size:15px;line-height:1.55}
+.section{padding:24px 26px}
+.section h3{font-size:23px;color:var(--navy);padding-left:13px;border-left:4px solid var(--accent);line-height:1.4;margin-bottom:18px}
+.section:has(.callout.red) h3{border-left-color:#C3576B}
+.section:has(.callout.orange) h3{border-left-color:var(--orange)}
+.section:has(.callout.green) h3{border-left-color:var(--teal)}
+.section h4{font-size:18px;color:var(--navy)}
+table{font-size:15px}
+th{font-size:15px;background:var(--panel-soft);color:var(--navy)}
+td,th{padding:12px 13px}
+tr:hover td{background:rgba(67,139,190,.045)}
+.callout{border-radius:0 14px 14px 0;padding:18px 20px;border-left-color:var(--accent);background:#FFF8E6;color:var(--text)}
+.callout.red{border-left-color:#C3576B;background:#FDF1F3}
+.callout.orange{border-left-color:var(--orange);background:#FFF3E7}
+.callout.green{border-left-color:var(--teal);background:#EAF7F3}
+.tag{font-size:14px;padding:5px 10px;border-radius:9px;background:var(--panel-soft)}
+.tag.red{background:#FCEEF1;color:#9F314A;border-color:#F3CBD5}
+.tag.orange,.tag.yellow{background:#FFF0DF;color:#8C4E12;border-color:#F1D6B5}
+.tag.green{background:#E5F5F0;color:#126E63;border-color:#C6E9DE}
+.navlinks a{font-size:15px;border-radius:12px;font-weight:700;transition:background .18s,border-color .18s}
+.navlinks a:hover{background:#FFF4CF;border-color:var(--accent);color:#172449}
+.theme-switch{font-size:14px;border-radius:11px}
+.theme-switch:hover,.theme-switch:focus-visible{border-color:var(--accent)}
+.archive-row{padding:17px 13px;border-radius:12px;transition:background .18s}
+.archive-row:hover,.archive-row:focus-visible{background:var(--panel-soft)}
+.archive-row strong{font-size:16px}
+.archive-row small,.archive-right,.archive-right em{font-size:15px}
+:root[data-theme="dark"] .hero{background:linear-gradient(125deg,#252F60,#313D78 70%,#4053A0)}
+:root[data-theme="dark"] .card{background:#1B3850;border-top-color:#72B4E2}
+:root[data-theme="dark"] .card:nth-child(2){background:#1C3C3B;border-top-color:#63C9B5}
+:root[data-theme="dark"] .card:nth-child(3){background:#263652;border-top-color:#8DABE8}
+:root[data-theme="dark"] .card:nth-child(4){background:#3C3425;border-top-color:#F6C543}
+:root[data-theme="dark"] .card-value{color:#F4F7FF}
+:root[data-theme="dark"] .section h3,:root[data-theme="dark"] .section h4,:root[data-theme="dark"] th{color:#F4F7FF}
+:root[data-theme="dark"] .callout{background:#413823}
+:root[data-theme="dark"] .callout.red{background:#452D38}
+:root[data-theme="dark"] .callout.orange{background:#493726}
+:root[data-theme="dark"] .callout.green{background:#1E423E}
+:root[data-theme="dark"] .tag.red{background:#452D38;color:#FFC0CC;border-color:#694557}
+:root[data-theme="dark"] .tag.orange,:root[data-theme="dark"] .tag.yellow{background:#493726;color:#F7D3A8;border-color:#795331}
+:root[data-theme="dark"] .tag.green{background:#1E423E;color:#A5EDD7;border-color:#3B6A61}
+:root[data-theme="dark"] .navlinks a:hover{background:#453B24;color:#F4F7FF}
+@media(max-width:760px){
+ .hero{padding:24px 21px}
+ .section{padding:20px 17px}
+ .section h3{font-size:21px}
+ .grid{gap:12px}
+ .card{padding:17px}
+ .section{overflow-x:auto}
 }
