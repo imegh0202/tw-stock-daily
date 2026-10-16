@@ -1,5 +1,0 @@
-GitHub write access test
-Repository: imegh0202/tw-stock-daily
-Branch: main
-Date: 2026-10-16 (Asia/Taipei)
-Purpose: Verify ability to create a new file without modifying existing files.
