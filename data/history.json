@@ -1,7 +1,7 @@
 [
   {
     "date": "2026-10-16",
-    "title": "2026/10/16 台股日報",
+    "title": "2026/10/16 市場紀錄",
     "url": "reports/2026-10-16.html",
     "market_state": "反彈但資金風險偏高",
     "risk_level": "high",
@@ -11,7 +11,7 @@
   },
   {
     "date": "2026-10-15",
-    "title": "2026/10/15 台股日報",
+    "title": "2026/10/15 市場紀錄",
     "url": "reports/2026-10-15.html",
     "market_state": "風險顯著升高",
     "risk_level": "high",
