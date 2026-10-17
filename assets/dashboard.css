@@ -461,3 +461,44 @@ body{font-size:16px;line-height:1.65}
 :root[data-theme="dark"] .panel a:focus-visible,
 :root[data-theme="dark"] .aside-card a:focus-visible,
 :root[data-theme="dark"] .rail a:focus-visible{outline-color:#F6C543}
+
+
+/* 2026-10: single navigation surface by viewport.
+ * Desktop: labeled Report Library nav (theme button inside header).
+ * Tablet/mobile: compact icon rail (sidebar hidden).
+ * Prevent duplicate navigation chrome from appearing together. */
+.desktop-theme-toggle{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:none;
+  border:1px solid var(--border);background:var(--card);color:var(--text);
+  border-radius:10px;padding:7px 10px;font:inherit;cursor:pointer;
+}
+.desktop-theme-toggle .theme-icon{font-size:19px;line-height:1}
+.desktop-theme-toggle .theme-label{font-size:14px}
+.desktop-theme-toggle:hover,.desktop-theme-toggle:focus-visible{
+  background:var(--accent-soft);border-color:var(--accent);outline-offset:2px;
+}
+@media(min-width:1021px){
+  .rail{display:none}
+  .shell{grid-template-columns:290px minmax(0,1fr);padding:16px 20px;gap:18px}
+  .aside-card{max-height:calc(100vh - 32px);overflow:auto}
+}
+@media(min-width:1021px) and (max-width:1250px){
+  .shell{grid-template-columns:268px minmax(0,1fr);padding:16px 14px}
+}
+@media(max-width:1020px){
+  .desktop-theme-toggle{display:none}
+}
+.record-heading{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.record-latest-tag{
+  display:inline-flex;align-items:center;
+  padding:2px 8px;border-radius:999px;
+  font-size:14px;font-weight:750;
+  background:var(--action-bg, #F3D68E);
+  color:var(--action-text, #172449);
+  border:1px solid rgba(98,75,25,.12)
+}
+:root[data-theme="dark"] .record-latest-tag{
+  background:var(--action-bg, #F3D68E);
+  color:var(--action-text, #172449);
+}
+.record-latest:hover{background:var(--accent-soft)}
