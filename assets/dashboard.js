@@ -43,23 +43,26 @@
   function renderHistory(history,filter=""){
     const records=$("records");if(!records)return;
     records.replaceChildren();
-    // 最新日報有獨立的主按鈕；此處只顯示較早日期，避免兩個入口指向同一篇。
-    const previous=history.slice(1);
+    // 日期索引應包含最新一篇；最新報告在上方卡片突出顯示，在這裡則按日期完整列出。
     const q=String(filter).trim().toLowerCase();
-    const shown=previous.filter(r=>(r.date+" "+r.title+" "+r.market_state).toLowerCase().includes(q)).slice(0,8);
+    const shown=history.filter(r=>(r.date+" "+r.title+" "+r.market_state).toLowerCase().includes(q)).slice(0,8);
     if(!shown.length){
-      records.append(elm("p","empty",q?"沒有其他符合條件的歷史日報。":history.length?"目前只有最新日報；新日報發布後，之前的紀錄會出現在這裡。":"尚無歷史報告。"));
+      records.append(elm("p","empty",q?"沒有符合條件的日報紀錄。":"尚無日報紀錄。"));
       return;
     }
     shown.forEach(r=>{
       const href=safeReportUrl(r.url);
       if(!href)return;
-      const line=elm("a","record");
+      const newest=r.date===history[0]?.date;
+      const line=elm("a","record"+(newest?" record-latest":""));
       line.href=href;
-      line.setAttribute("aria-label","閱讀 "+(r.title||fmtDay(r.date))+" 完整日報");
+      line.setAttribute("aria-label","閱讀 "+(r.title||fmtDay(r.date))+" 完整報告");
       const date=elm("span","record-date",fmtDay(r.date).slice(5));
       const content=elm("span","record-detail");
-      content.append(elm("strong","record-title",r.title||fmtDay(r.date)));
+      const heading=elm("span","record-heading");
+      heading.append(elm("strong","record-title",r.title||fmtDay(r.date)));
+      if(newest)heading.append(elm("span","record-latest-tag","最新"));
+      content.append(heading);
       content.append(elm("span","record-status",r.market_state||"市場狀態待確認"));
       line.append(date,content,elm("span","record-arrow","↗"));
       records.append(line);
