@@ -1,10 +1,10 @@
-# 📊 台股每日觀察｜投資日報戰情室
+# 📊 Market Journal｜市場觀察紀錄
 
-使用 GitHub Pages 免費展示台股盤後日報。**首頁是永久儀表板**，完整日報依日期保存獨立 HTML，歷史清單與統計依 JSON 自動顯示。
+使用 GitHub Pages 免費展示市場盤後紀錄。**首頁是永久儀表板**，完整日報依日期保存獨立 HTML，歷史清單與統計依 JSON 自動顯示。
 
 ## 公開閱讀
 
-- **[固定入口｜台股日報戰情室](https://imegh0202.github.io/tw-stock-daily/)**
+- **[固定入口｜市場觀察首頁](https://imegh0202.github.io/tw-stock-daily/)**
 - [歷史日報查詢](https://imegh0202.github.io/tw-stock-daily/archive.html)
 - [投資理財知識庫（八章與術語速查）](https://imegh0202.github.io/tw-stock-daily/guide.html)
 - [原始碼 Repository](https://github.com/imegh0202/tw-stock-daily)
@@ -27,7 +27,7 @@ data/history.json        # 歷史清單（date 去重），首頁與 archive 都
 
 ## 每日更新規則
 
-1. ChatGPT「台股日報｜GitHub HTML」平日台灣時間約 17:00 執行（排程為彈性執行，週末目前沒有啟用）。
+1. ChatGPT「每日市場觀察｜HTML」平日台灣時間約 17:00 執行（排程為彈性執行，週末目前沒有啟用）。
 2. 查證收盤資料、法人、匯率、主要事件，產生 `reports/YYYY-MM-DD.html` 和當日 JSON。
 3. 更新 `data/latest.json` 和 `data/history.json`，保留所有已建立的歷史檔案。
 4. **不要更新 `index.html`**：首頁 JavaScript 會在載入時讀取 JSON，立即展示最新日報。
