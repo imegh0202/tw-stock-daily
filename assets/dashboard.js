@@ -112,7 +112,7 @@
       $("search-report")?.addEventListener("input",e=>renderHistory(history,e.target.value));
       set("feed-status","資料已同步");const d=$("status-dot");if(d)d.classList.remove("warn");
     }catch(err){
-      console.error("台股日報載入失敗",err);
+      console.error("市場紀錄載入失敗",err);
       set("feed-status","資料載入失敗");
       set("latest-taiex","待載入");
       const box=$("records");if(box)box.append(elm("p","empty","目前無法載入最新索引，請前往歷史日報頁查看。"));
