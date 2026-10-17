@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-16",
+    "title": "2026/10/16 台股日報",
+    "url": "reports/2026-10-16.html",
+    "market_state": "反彈但資金風險偏高",
+    "risk_level": "high",
+    "taiex_close": 47111.26,
+    "change_pct": 0.3,
+    "fx_usd_twd": 32.338
+  },
+  {
     "date": "2026-10-15",
     "title": "2026/10/15 台股日報",
     "url": "reports/2026-10-15.html",
