@@ -33,6 +33,7 @@
 <a href="#chapter-07"><b>07</b>投資組合風險</a>
 <a href="#chapter-08"><b>08</b>投資決策紀錄</a>
 <a href="#long-short-basics"><b>↕</b>做多與做空教學</a>
+<a href="#long-short-examples"><b>✓</b>多空實戰案例與測驗</a>
 <a href="#dictionary"><b>＋</b>常用術語速查</a>
 <a href="#sources"><b>↗</b>資料與來源</a>
 </nav>
@@ -48,7 +49,7 @@
 </header>
 <nav class="kb-mobile-nav" aria-label="手機版章節捷徑">
   <a href="#chapter-01">01 基礎觀念</a><a href="#chapter-02">02 風險承受度</a><a href="#chapter-03">03 資產配置</a><a href="#chapter-04">04 ETF／基金</a>
-  <a href="#chapter-05">05 個股基本面</a><a href="#chapter-06">06 總體經濟</a><a href="#chapter-07">07 風險檢查</a><a href="#chapter-08">08 決策紀錄</a><a href="#long-short-basics">多空交易入門</a><a href="#dictionary">術語</a>
+  <a href="#chapter-05">05 個股基本面</a><a href="#chapter-06">06 總體經濟</a><a href="#chapter-07">07 風險檢查</a><a href="#chapter-08">08 決策紀錄</a><a href="#long-short-basics">多空交易入門</a><a href="#long-short-examples">案例測驗</a><a href="#dictionary">術語</a>
 </nav>
 <div class="kb-quick-nav" aria-label="快速章節入口">
 <a class="kb-topic" href="#chapter-01"><span class="num">01 — 02</span><strong>先建立投資概念</strong><small>市場、ETF、複利、風險承受度 →</small></a>
@@ -255,6 +256,108 @@
 <details class="ls-quiz"><summary>小測驗：覺得股票會跌，所以先保留現金，這叫做空嗎？</summary><p><strong>不是。</strong>這屬於看空但沒有做空。只有建立實際受惠於下跌的空頭部位，才稱為「做空」。</p></details>
 <p class="kb-muted">本專題為市場交易概念教育，不提供融券或期貨操作指令，也不建議使用槓桿或短線追價。可至下方<a href="#dictionary">投資術語速查</a>快速複習。</p>
 </section>
+
+<section class="panel kb-section" id="long-short-examples" aria-labelledby="long-short-examples-title">
+  <div class="kb-section-head"><span class="kb-count">✓</span><div>
+    <h2 id="long-short-examples-title">多空觀念實例｜已實現損益、平倉與停損跳空</h2>
+    <p class="section-desc">延伸前面的做多／做空入門：用 3 個數字案例和小測驗建立完整觀念</p>
+  </div></div>
+  <p>先理解概念，再看實際交易會遇到的問題。以下價差均為<strong>假設每股 1 股、未計交易稅費與融券成本</strong>的教學示例，不是行情預測，也不是交易建議。</p>
+
+  <h3>案例 1｜賣掉手上股票，等於反手做空嗎？</h3>
+  <div class="practice-grid">
+    <div class="practice-card practice-card-neutral">
+      <div class="practice-label">情境 A · 只有賣掉原有股票</div>
+      <strong>持有股票 → 賣出持股 → 空手</strong>
+      <p>你原本做多，賣出後就沒有這個股票的多頭部位。<strong>這是平掉多單，不是做空。</strong></p>
+    </div>
+    <div class="practice-card practice-card-orange">
+      <div class="practice-label">情境 B · 真的反手做空</div>
+      <strong>持有多單 → 平倉 → 另建空單</strong>
+      <p>你不只是結束多頭部位，還另外建立會受惠於價格下跌的空頭部位，才稱為<strong>反手做空</strong>。</p>
+    </div>
+  </div>
+  <div class="practice-callout"><strong>觀念補充：</strong>「看空不做空」則是認為可能下跌，卻沒有建立空單；例如賣掉部分股票、提高現金比重或暫時觀望。即使市場真的下跌，也不會自動取得做空價差收益。</div>
+
+  <h3>案例 2｜空單已經賠錢，但還沒買回：是已實現還是未實現？</h3>
+  <p>假設你在 <strong>1,000 元融券賣出 1 股</strong>，現在股價漲到 <strong>1,200 元</strong>，但尚未買回股票。</p>
+  <div class="practice-state-row">
+    <div class="practice-state"><span>建立空單</span><strong>1,000 元</strong><small>先融券賣出</small></div>
+    <span class="practice-state-arrow" aria-hidden="true">→</span>
+    <div class="practice-state"><span>市場價格上漲</span><strong>1,200 元</strong><small>空單仍未平倉</small></div>
+    <span class="practice-state-arrow" aria-hidden="true">→</span>
+    <div class="practice-state practice-state-loss"><span>目前帳面價差</span><strong>−200 元</strong><small>未實現虧損／股</small></div>
+  </div>
+  <div class="kb-table-wrap">
+    <table class="kb-table"><thead><tr><th>你採取的動作</th><th>損益屬性</th><th>假設結果</th></tr></thead><tbody>
+      <tr><td>繼續持有空單，尚未買回</td><td>未實現損益（浮動損益）</td><td>帳面虧損 200 元／股，會隨股價變動</td></tr>
+      <tr><td>以 1,200 元買回並平倉</td><td>已實現損益</td><td>價差虧損確定為 200 元／股，不再受該筆部位之後的價格變動影響</td></tr>
+    </tbody></table>
+  </div>
+  <p>只要空單還沒平倉，假設股價接下來變成不同價格，帳面價差就會不同：</p>
+  <div class="practice-grid">
+    <div class="practice-card practice-card-neutral">
+      <div class="practice-label">上漲情境</div>
+      <strong>1,000 → 1,500 元</strong>
+      <p class="practice-loss-value">未實現虧損 −500 元／股</p>
+    </div>
+    <div class="practice-card practice-card-teal">
+      <div class="practice-label">下跌情境</div>
+      <strong>1,000 → 900 元</strong>
+      <p class="practice-gain-value">未實現獲利 +100 元／股</p>
+    </div>
+  </div>
+  <div class="practice-warning"><strong>重點風險：</strong>未實現虧損不代表不用負擔風險。融券交易可能因維持率不足而被追繳擔保品、被要求回補或遭強制處置。<strong>期貨有每日結算與保證金制度</strong>，不能直接把股票融券的已實現／未實現說法套用為期貨資金流。</div>
+
+  <h3>案例 3｜明明設了停損 1,100 元，為何可能賠到 200 元？</h3>
+  <p>假設某種可能跳空的交易標的：你在 <strong>1,000 元做空</strong>，想在價格上漲至 <strong>1,100 元</strong>時停損，結果下一個可交易價格直接出現在 <strong>1,200 元</strong>。</p>
+  <div class="practice-stop-flow">
+    <div class="practice-stop-stage"><span>做空成交</span><strong>1,000 元</strong><small>先賣出</small></div>
+    <span class="practice-stop-arrow" aria-hidden="true">→</span>
+    <div class="practice-stop-stage practice-stop-target"><span>預設停損觸發價</span><strong>1,100 元</strong><small>原希望虧損約 100 元／股</small></div>
+    <span class="practice-stop-arrow" aria-hidden="true">⇢</span>
+    <div class="practice-stop-stage practice-stop-bad"><span>跳空後可交易價格</span><strong>1,200 元</strong><small>沒有保證能在 1,100 元成交</small></div>
+  </div>
+  <div class="practice-grid">
+    <div class="practice-card practice-card-blue">
+      <div class="practice-label">停損市價類型</div>
+      <strong>優先處理出場，價格不保證</strong>
+      <p>條件觸發後嘗試以市價買回。若市場只有約 1,200 元的賣盤，可能在該價附近或更不利的價格成交，虧損超過原先預估。</p>
+    </div>
+    <div class="practice-card practice-card-orange">
+      <div class="practice-label">停損限價類型</div>
+      <strong>限制買回價，但可能無法成交</strong>
+      <p>例如觸發價 1,100 元、買回限價 1,110 元，若可成交賣價都在 1,200 元附近，限價買回單可能完全無法成交，空單仍在。</p>
+    </div>
+  </div>
+  <p class="kb-muted">上述 1,000 → 1,200 元的跳空只是跨市場的抽象示例，<strong>不代表一般台股個股可以在單一交易日不受漲跌幅限制地上漲 20%</strong>。實際能否使用條件停損委託、觸發方式及價格限制，依市場和券商規定而異。</p>
+  <div class="practice-warning"><strong>核心觀念：</strong>「停損觸發價」不等於「保證成交價」。空單遇到上漲、跳空、流動性不足或軋空，損失可能超出原先規劃；融券放空理論虧損沒有固定上限，槓桿交易也可能損失超過原始保證金。</div>
+
+  <h3>練習題｜先想答案，再展開解答</h3>
+  <div class="practice-quiz-grid">
+    <div class="practice-quiz">
+      <div class="practice-quiz-num">01 · 部位方向</div>
+      <strong>認為股價會跌，因此賣掉原本持有的股票，但沒有另外建立空單。這是哪一種？</strong>
+      <p>A. 反手做空　B. 平掉多單　C. 已建立空單</p>
+      <details><summary>查看答案與原因</summary><p><strong>答案 B：平掉多單。</strong>你結束原本的持股部位，但沒有新建空單。看跌只是看法，並不會自動變成做空交易。</p></details>
+    </div>
+    <div class="practice-quiz">
+      <div class="practice-quiz-num">02 · 浮動損益</div>
+      <strong>在 1,000 元建立空單，現價 1,200 元，仍未買回。此時是？</strong>
+      <p>A. 已實現虧損　B. 未實現虧損　C. 沒有風險</p>
+      <details><summary>查看答案與原因</summary><p><strong>答案 B：未實現虧損 200 元／股。</strong>尚未平倉，價差仍會變動，但可能已面臨追繳或強制回補風險。</p></details>
+    </div>
+    <div class="practice-quiz">
+      <div class="practice-quiz-num">03 · 停損跳空</div>
+      <strong>空單設定 1,100 元停損，下一個可交易價卻是 1,200 元。哪個說法正確？</strong>
+      <p>A. 一定只虧 100 元　B. 可能虧超過 100 元　C. 不會有虧損</p>
+      <details><summary>查看答案與原因</summary><p><strong>答案 B。</strong>停損市價單可能在更差的價位成交；停損限價單則可能無法成交。設定停損無法保證最大虧損。</p></details>
+    </div>
+  </div>
+  <div class="kb-focus"><strong>帶走的三個結論：</strong>看法不等於持倉；未實現虧損依然有實際風險；停損價格不保證成交價格。對一般長期投資人，理解這些風險比急著學會放空更重要。</div>
+  <p class="kb-muted">教學內容整理：2026-10-18。本文不涉及個人資產配置建議。券商條件單、融券維持率、交割與保證金等規則應依交易當時的市場及券商公告查核。</p>
+</section>
+
 <section class="panel kb-section" id="dictionary">
 <div class="kb-section-head"><span class="kb-count">＋</span><div><h2>投資常用術語速查</h2><p class="section-desc">將日報裡常見、容易混淆的詞彙集中整理</p></div></div>
 <label for="concept-search" class="small-label">搜尋術語或說明文字</label><div><input class="kb-search" type="search" id="concept-search" placeholder="例如：空單、複利、配息、停損…" autocomplete="off"></div>
