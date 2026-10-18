@@ -266,3 +266,71 @@
  .ls-story{padding:17px;gap:11px}
  .ls-story-symbol{flex:0 0 34px;width:34px;height:34px}
 }
+
+/* Trading case studies: realized P&L, reversing direction and stop-gap loss. */
+#long-short-examples{border-top-color:var(--warm)}
+#long-short-examples .kb-count{background:#FFF0DE;color:#995A20}
+.practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0}
+.practice-card{min-width:0;border:1px solid #DDE4EF;border-top:4px solid var(--ice);border-radius:17px;background:#F2F7FC;padding:20px 22px}
+.practice-card-neutral{border-top-color:#4053A0}
+.practice-card-orange{background:#FFF5E9;border-color:#EBD9BD;border-top-color:#D88642}
+.practice-card-teal{background:#EAF7F3;border-color:#CBE9DF;border-top-color:#178E83}
+.practice-card-blue{background:#EDF5FC;border-top-color:#438BBE}
+.practice-label{font-size:14px;color:#586783;font-weight:780;margin-bottom:8px;letter-spacing:.01em}
+.practice-card strong{display:block;font-size:17px;line-height:1.6;color:#172449}
+.practice-card p{color:#354665!important;font-size:15px!important;line-height:1.8;margin:10px 0 0!important}
+.practice-card p strong{font-size:15px;display:inline;color:#172449}
+.practice-gain-value{font-size:17px!important;color:#116C64!important;font-weight:780}
+.practice-loss-value{font-size:17px!important;color:#A2384B!important;font-weight:780}
+.practice-callout{border-left:4px solid #F6C543;background:#FFF8E6;border-radius:0 14px 14px 0;padding:17px 20px;margin:19px 0;font-size:15px;line-height:1.8;color:#172449}
+.practice-warning{border-left:4px solid #C3576B;border-radius:0 14px 14px 0;background:#FDF1F3;padding:18px 20px;margin:20px 0;font-size:15px;line-height:1.9;color:#172449}
+.practice-state-row,.practice-stop-flow{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr) 20px minmax(0,1fr);gap:10px;align-items:stretch;margin:19px 0}
+.practice-state,.practice-stop-stage{min-width:0;display:flex;flex-direction:column;gap:8px;padding:18px 16px;background:#EFF5FC;border:1px solid #DDE4EF;border-radius:16px}
+.practice-state span,.practice-stop-stage span{font-size:14px;color:#586783;font-weight:730}
+.practice-state strong,.practice-stop-stage strong{font-size:22px;line-height:1.35;font-weight:800;color:#252F60;overflow-wrap:anywhere}
+.practice-state small,.practice-stop-stage small{font-size:14px;color:#586783;line-height:1.65}
+.practice-state-arrow,.practice-stop-arrow{font-weight:900;font-size:23px;color:#D88642;align-self:center;text-align:center}
+.practice-state-loss,.practice-stop-bad{background:#FFF0F1;border-color:#F0D0D6;border-top:4px solid #C3576B}
+.practice-state-loss strong,.practice-stop-bad strong{color:#A2384B}
+.practice-stop-target{background:#FFF9E9;border-color:#ECDCAF;border-top:4px solid #F6C543}
+.practice-quiz-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:16px 0 22px}
+.practice-quiz{min-width:0;border:1px solid var(--border);background:var(--card);border-top:4px solid var(--info);padding:20px 22px;border-radius:17px}
+.practice-quiz:nth-child(2){border-top-color:var(--teal)}
+.practice-quiz:nth-child(3){border-top-color:var(--warm)}
+.practice-quiz-num{font-size:14px;font-weight:800;color:#586783;margin-bottom:10px}
+.practice-quiz>strong{display:block;font-size:17px;line-height:1.65;color:var(--heading)}
+.practice-quiz>p{font-size:15px!important;line-height:1.8;color:var(--muted)}
+.practice-quiz details{border-top:1px solid var(--border);padding:13px 0 0;margin-top:12px}
+.practice-quiz summary{font-size:15px;line-height:1.8;color:#705300;font-weight:780;cursor:pointer}
+.practice-quiz summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.practice-quiz details p{font-size:15px!important;line-height:1.8;margin-bottom:0}
+:root[data-theme="dark"] #long-short-examples .kb-count{background:#453B24;color:#F6C543}
+:root[data-theme="dark"] .practice-card{background:#263B56;border-color:#3B5674}
+:root[data-theme="dark"] .practice-card-orange{background:#493726;border-color:#79583C}
+:root[data-theme="dark"] .practice-card-teal{background:#1C3D3A;border-color:#3B6960}
+:root[data-theme="dark"] .practice-card-blue{background:#203D56}
+:root[data-theme="dark"] .practice-card strong,:root[data-theme="dark"] .practice-quiz>strong{color:#F4F7FF}
+:root[data-theme="dark"] .practice-card p,:root[data-theme="dark"] .practice-card p strong{color:#CED9E9!important}
+:root[data-theme="dark"] .practice-card .practice-gain-value{color:#80E1D1!important}
+:root[data-theme="dark"] .practice-card .practice-loss-value{color:#F3B0BE!important}
+:root[data-theme="dark"] .practice-label,:root[data-theme="dark"] .practice-quiz-num{color:#D0DAEA}
+:root[data-theme="dark"] .practice-callout{background:#453B24;color:#F4F7FF}
+:root[data-theme="dark"] .practice-warning{background:#49303B;color:#F4F7FF}
+:root[data-theme="dark"] .practice-state,:root[data-theme="dark"] .practice-stop-stage{background:#263B56;border-color:#405978}
+:root[data-theme="dark"] .practice-state-loss,:root[data-theme="dark"] .practice-stop-bad{background:#49303B;border-color:#795362}
+:root[data-theme="dark"] .practice-stop-target{background:#453B24;border-color:#705C30}
+:root[data-theme="dark"] .practice-state strong,:root[data-theme="dark"] .practice-stop-stage strong{color:#F4F7FF}
+:root[data-theme="dark"] .practice-state-loss strong,:root[data-theme="dark"] .practice-stop-bad strong{color:#F3B0BE}
+:root[data-theme="dark"] .practice-state span,:root[data-theme="dark"] .practice-state small,:root[data-theme="dark"] .practice-stop-stage span,:root[data-theme="dark"] .practice-stop-stage small{color:#CED9E9}
+:root[data-theme="dark"] .practice-quiz summary{color:#F6C543}
+@media(max-width:900px){.practice-quiz-grid{grid-template-columns:1fr}}
+@media(max-width:820px){
+ .practice-state-row,.practice-stop-flow{grid-template-columns:minmax(0,1fr);gap:8px}
+ .practice-state-arrow,.practice-stop-arrow{transform:rotate(90deg);justify-self:center;line-height:1}
+ .practice-state,.practice-stop-stage{padding:18px 20px}
+}
+@media(max-width:620px){
+ .practice-grid{grid-template-columns:1fr}
+ .practice-card,.practice-quiz{padding:18px}
+ .practice-state strong,.practice-stop-stage strong{font-size:21px}
+}
