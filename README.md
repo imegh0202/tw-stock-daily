@@ -6,7 +6,7 @@
 
 - **[固定入口｜市場觀察首頁](https://imegh0202.github.io/tw-stock-daily/)**
 - [歷史日報查詢](https://imegh0202.github.io/tw-stock-daily/archive.html)
-- [投資理財知識庫（八章與術語速查）](https://imegh0202.github.io/tw-stock-daily/guide.html)
+- [投資理財知識庫（八章、做多做空教學、術語速查）](https://imegh0202.github.io/tw-stock-daily/guide.html)
 - [原始碼 Repository](https://github.com/imegh0202/tw-stock-daily)
 
 ## 目前檔案
@@ -24,6 +24,11 @@ data/YYYY-MM-DD.json     # 每日結構化資料
 data/latest.json         # 最新日報，入口首頁使用
 data/history.json        # 歷史清單（date 去重），首頁與 archive 都會讀取
 ```
+
+## 投資觀念專題
+
+- `guide.html#long-short-basics`：看多／做多、看空不做空、空單、反手做空、融券放空與期貨差異；包含概念流程、假設價差與風險提醒。
+- 此專題為固定教育內容，不參與每日行情排程的 JSON 更新；修改時保留左側章節連結、手機導覽、最小 14px 字級及 `#F6C543` 視覺風格。
 
 ## 每日更新規則
 
