@@ -1,0 +1,300 @@
+{
+  "date": "2026-10-19",
+  "trading_day": true,
+  "title": "2026/10/19 市場紀錄",
+  "url": "reports/2026-10-19.html",
+  "market_state": "高風險觀察｜市場廣度與外資承壓",
+  "risk_level": "high",
+  "taiex": {
+    "close": 46822.08,
+    "change_points": -289.18,
+    "change_pct": -0.61,
+    "previous_close": 47111.26,
+    "open": 46844.64,
+    "high": 46844.64,
+    "low": 46170,
+    "turnover_100m_twd": 8251,
+    "turnover_billion_twd": 825.1,
+    "turnover_scope": "中央社當日收盤新聞口徑",
+    "twse_total_turnover_100m_twd": 8644.44,
+    "twse_total_turnover_billion_twd": 864.444,
+    "twse_common_stock_turnover_100m_twd": 7639.13,
+    "twse_securities_total_turnover_100m_twd": 7653.7,
+    "turnover_note": "中央社成交值 8,251 億與 TWSE 各交易類別合計 8,644.44 億的統計範圍不同，不可當成相同口徑",
+    "advancers": 167,
+    "decliners": 864,
+    "unchanged": 72,
+    "breadth_scope": "中央社收盤統計，計 1,103 家；與證交所上市家數定義可能不同"
+  },
+  "institutions": {
+    "foreign_100m_twd": -767.42,
+    "investment_trust_100m_twd": 230.51,
+    "dealers_proprietary_100m_twd": -60.23,
+    "dealers_hedging_100m_twd": -302.4,
+    "dealers_100m_twd": -362.63,
+    "total_100m_twd": -899.54,
+    "foreign_billion_twd": -76.742,
+    "investment_trust_billion_twd": 23.051,
+    "dealers_billion_twd": -36.263,
+    "total_billion_twd": -89.954,
+    "scope": "集中市場，2026-10-19 盤後法人買賣超",
+    "note": "自營商分項依當日資料整理；中央社核實合併自營商 -362.63 億元；各分項尾數或因四捨五入有差異"
+  },
+  "usd_twd": 32.445,
+  "usd_twd_status": "2026-10-19 台北外匯市場正式收盤",
+  "fx_usd_twd_change": 0.107,
+  "fx_usd_twd_open": 32.36,
+  "fx_usd_twd_intraday_max": 32.572,
+  "fx_turnover_100m_usd": 28.31,
+  "tsmc": {
+    "ticker": "2330",
+    "close": 2420,
+    "change_points": 0,
+    "change_pct": 0
+  },
+  "major_stocks": [
+    {
+      "ticker": "2454",
+      "name": "聯發科",
+      "close": null,
+      "change_pct": null,
+      "note": "未核實精確收盤"
+    },
+    {
+      "ticker": "2317",
+      "name": "鴻海",
+      "close": null,
+      "change_pct": null,
+      "note": "未核實精確收盤"
+    },
+    {
+      "ticker": "2308",
+      "name": "台達電",
+      "close": null,
+      "change_pct": null,
+      "note": "未核實精確收盤"
+    }
+  ],
+  "sector_details": [
+    {
+      "sector": "機電",
+      "change_pct": -0.42,
+      "trend": "弱勢"
+    },
+    {
+      "sector": "金融",
+      "change_pct": -0.94,
+      "trend": "弱勢"
+    },
+    {
+      "sector": "塑化",
+      "change_pct": -2.41,
+      "trend": "弱勢"
+    },
+    {
+      "sector": "紡織",
+      "change_pct": -1.7,
+      "trend": "弱勢"
+    },
+    {
+      "sector": "半導體／AI電子",
+      "change_pct": null,
+      "trend": "分化",
+      "note": "細分族群報酬率待確認"
+    }
+  ],
+  "strong_sectors": [],
+  "weak_sectors": [
+    "機電",
+    "金融",
+    "塑化",
+    "紡織",
+    "記憶體與部分AI電子"
+  ],
+  "risks": [
+    "下跌864家對比上漲167家，市場廣度顯著偏弱",
+    "外資及陸資賣超767.42億元、三大法人合計賣超899.54億元",
+    "新台幣兌美元正式收32.445元，較前一日貶值0.107元",
+    "台積電持平2,420元仍無法抵銷市場普跌壓力"
+  ],
+  "risk_signals": [
+    {
+      "factor": "價格與廣度",
+      "level": "high",
+      "color": "red"
+    },
+    {
+      "factor": "外資動向",
+      "level": "high",
+      "color": "red"
+    },
+    {
+      "factor": "新台幣匯率",
+      "level": "medium",
+      "color": "orange"
+    },
+    {
+      "factor": "台積電",
+      "level": "medium",
+      "color": "orange"
+    }
+  ],
+  "macro_events": [
+    {
+      "date": "2026-10-19",
+      "event": "央行說明全球科技股 AI 高估值、融資與外資動向相關風險",
+      "source_url": "https://www.cna.com.tw/news/afe/202610190067.aspx"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "美國9月CPI 已公布",
+      "value": null,
+      "status": "本日HTML未引用精確數值"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "美國9月PPI 已公布",
+      "value": null,
+      "status": "本日HTML未引用精確數值"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-10-20",
+      "importance": "high",
+      "risk_color": "red",
+      "event": "台灣9月外銷訂單",
+      "source_url": "https://www.moea.gov.tw/MNS/dos/content/SubMenu.aspx?menu_id=9390",
+      "notes": "關注AI及半導體外需與接單延續性"
+    },
+    {
+      "date": "2026-10-20",
+      "importance": "low",
+      "risk_color": "green",
+      "event": "美國9月州別就業與失業統計",
+      "release_time": "10:00 ET / 22:00 Asia/Taipei",
+      "source_url": "https://www.bls.gov/schedule/2026/10_sched_list.htm"
+    },
+    {
+      "date": "2026-10-21",
+      "importance": "medium",
+      "risk_color": "orange",
+      "event": "美國Q3受薪工作者通常每週薪資",
+      "release_time": "10:00 ET / 22:00 Asia/Taipei",
+      "source_url": "https://www.bls.gov/schedule/2026/10_sched_list.htm"
+    },
+    {
+      "date": "2026-10-23",
+      "importance": "medium",
+      "risk_color": "orange",
+      "event": "台灣9月工業生產與批零餐營業額",
+      "source_url": "https://www.moea.gov.tw/MNS/dos/content/SubMenu.aspx?menu_id=9390"
+    }
+  ],
+  "scenarios": {
+    "base": "以46,170～47,111點近期已發生交易範圍觀察量價；台積電維持相對平穩但市場廣度與外資動向仍需確認",
+    "strengthening": [
+      "上漲家數占比明顯改善，不再由少數權值支撐",
+      "外資賣超收斂或轉買，投信承接延續",
+      "正式USD/TWD收盤止貶，電子與金融同步回穩"
+    ],
+    "weakening": [
+      "指數再度跌破10/19日低附近且下跌家數持續擴大",
+      "外資持續大額賣超與新台幣續貶",
+      "台積電、大型AI與傳產同步走弱"
+    ]
+  },
+  "next_trading_day": "2026-10-20",
+  "watch_next": [
+    "外資現貨買賣超是否較10/19的767.42億元賣超明顯收斂",
+    "USD/TWD 32.445 後正式收盤是否止貶",
+    "台積電與大型電子是否出現普遍回穩",
+    "市場廣度下跌家數864家是否改善，成交熱度是否擴散",
+    "10/20台灣9月外銷訂單與美國數據官方發布後的實際反應"
+  ],
+  "etf_long_term_risks": [
+    "市值型ETF可能高度集中大型科技及半導體權值股",
+    "分清長期投資與短期資金用途，避免投資期限錯配",
+    "評估單一市場與單一產業曝險、波動承受度及資產配置",
+    "分批投入依原先策略，而非單日新聞情緒"
+  ],
+  "as_of": "2026-10-19T18:02:00+08:00",
+  "data_quality": {
+    "status": "盤後交叉核實，部分權值股精確收盤待確認",
+    "unverified_fields": [
+      "聯發科收盤",
+      "鴻海收盤",
+      "台達電收盤",
+      "半導體／AI細分族群報酬率"
+    ],
+    "unit_notice": "*_100m_twd 為億新台幣；*_billion_twd 為十億新台幣"
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "name": "TWSE｜10/19 每日收盤與類股指數",
+      "url": "https://www.twse.com.tw/exchangeReport/MI_INDEX?date=20261019&response=html&type=ALLBUT0999",
+      "published_at": "2026/10/19 正式盤後"
+    },
+    {
+      "id": "S02",
+      "name": "中央社｜台股收盤、成交額、市場廣度",
+      "url": "https://www.cna.com.tw/news/afe/202610190116.aspx",
+      "published_at": "2026/10/19 13:58"
+    },
+    {
+      "id": "S03",
+      "name": "中央社｜三大法人盤後金額",
+      "url": "https://news.pchome.com.tw/finance/cna_business/20261019/index-17923937947651622003.html",
+      "published_at": "2026/10/19 15:09"
+    },
+    {
+      "id": "S04",
+      "name": "TWSE 資料整理｜三大法人金額拆分",
+      "url": "https://stock.wearn.com/fundthree.asp",
+      "published_at": "2026/10/19 盤後"
+    },
+    {
+      "id": "S05",
+      "name": "中央社｜台北匯市正式收盤",
+      "url": "https://money.udn.com/money/story/5616/9824237",
+      "published_at": "2026/10/19 16:12"
+    },
+    {
+      "id": "S06",
+      "name": "Yahoo 股市｜台積電 2330 收盤",
+      "url": "https://tw.finance.yahoo.com/quote/2330.TW",
+      "published_at": "2026/10/19 14:30 更新"
+    },
+    {
+      "id": "S07",
+      "name": "中央社｜央行對匯率及外資流向說明",
+      "url": "https://www.cna.com.tw/news/afe/202610190067.aspx",
+      "published_at": "2026/10/19 11:46"
+    },
+    {
+      "id": "S08",
+      "name": "經濟部統計處｜10 月調查統計發布",
+      "url": "https://www.moea.gov.tw/MNS/dos/content/SubMenu.aspx?menu_id=9390",
+      "published_at": "2026/09/29 公告"
+    },
+    {
+      "id": "S09",
+      "name": "美國 BLS｜2026 年 10 月發布行事曆",
+      "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+      "published_at": "2026/02/18 修訂"
+    },
+    {
+      "id": "S10",
+      "name": "TWSE｜成交金額分類明細",
+      "url": "https://www.twse.com.tw/exchangeReport/MI_INDEX?date=20261019&response=html&type=ALLBUT0999",
+      "published_at": "2026/10/19 正式盤後"
+    },
+    {
+      "id": "S11",
+      "name": "Yahoo 財經｜市場重點與科技股分化",
+      "url": "https://tw.stock.yahoo.com/news/%E3%80%90follow%E6%B3%95%E4%BA%BA%E3%80%91%E5%A4%96%E8%B3%87%E5%86%8D%E7%A0%8D767%E5%84%84%E5%85%83%EF%BC%81%E9%80%A39%E6%97%A5%E6%8F%90%E6%AC%BE%E5%8F%B0%E8%82%A1%E9%80%BE7585%E5%84%84%E5%85%83-070339089.html",
+      "published_at": "2026/10/19 15:03 左右"
+    }
+  ]
+}
