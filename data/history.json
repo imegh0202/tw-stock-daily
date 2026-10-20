@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-20",
+    "title": "2026/10/20 市場紀錄",
+    "url": "reports/2026-10-20.html",
+    "market_state": "股匯承壓，外資賣壓未解",
+    "risk_level": "high",
+    "taiex_close": 46292.93,
+    "change_pct": -1.13,
+    "fx_usd_twd": null
+  },
+  {
     "date": "2026-10-19",
     "title": "2026/10/19 市場紀錄",
     "url": "reports/2026-10-19.html",
