@@ -488,3 +488,88 @@ body{background:var(--portal-paper);font-family:Inter,"Noto Sans TC","PingFang T
   #dashboard .index-line .num{font-size:clamp(29px,8.5vw,34px)}
   #dashboard .record-title{font-size:15px}
 }
+
+/* Dark cards · user's requested neutral charcoal #343434.
+   Keep semantic colors as small indicators, not as large navy card surfaces. */
+:root[data-theme="dark"]{
+  --portal-surface:#343434;
+  --portal-subtle:#3D3D3D;
+  --portal-line:#555555;
+  --portal-shadow:0 12px 28px rgba(0,0,0,.16);
+  --card:#343434;
+  --border:#555555;
+  --muted:#CCCCCC;
+}
+/* One consistent charcoal foundation for every main dashboard card. */
+:root[data-theme="dark"] #dashboard .panel,
+:root[data-theme="dark"] #dashboard .feature-panel,
+:root[data-theme="dark"] #dashboard .feature-panel:first-child,
+:root[data-theme="dark"] #dashboard .pulse-panel,
+:root[data-theme="dark"] #dashboard .pulse-panel:last-child,
+:root[data-theme="dark"] #dashboard #history,
+:root[data-theme="dark"] #dashboard #events,
+:root[data-theme="dark"] #dashboard #risks,
+:root[data-theme="dark"] #dashboard #system,
+:root[data-theme="dark"] #dashboard #resources{
+  background:#343434!important;
+  background-image:none!important;
+  border-color:#555555;
+  color:#F4F7FF;
+}
+:root[data-theme="dark"] #dashboard .feature-panel,
+:root[data-theme="dark"] #dashboard .feature-panel:first-child{
+  border-color:#656565;
+  box-shadow:0 12px 30px rgba(0,0,0,.20);
+}
+/* Retain distinctive slim risk/category markers, but not colored card fills. */
+:root[data-theme="dark"] #dashboard .pulse-panel{border-top:3px solid #72B4E2}
+:root[data-theme="dark"] #dashboard #history{border-top:3px solid #72B4E2}
+:root[data-theme="dark"] #dashboard #events{border-top:3px solid #63C9B5}
+:root[data-theme="dark"] #dashboard #risks{border-top:3px solid #F1A2B5}
+:root[data-theme="dark"] #dashboard #system{border-top:3px solid #E5A56C}
+:root[data-theme="dark"] #dashboard #resources{border-top:3px solid #F6C543}
+/* Nested surfaces use nearby neutral values so the card hierarchy remains legible. */
+:root[data-theme="dark"] #dashboard .pulse-panel .donut-hole{background:#343434}
+:root[data-theme="dark"] #dashboard .resource-item,
+:root[data-theme="dark"] #dashboard .resource-item:nth-child(2),
+:root[data-theme="dark"] #dashboard .resource-item:nth-child(3),
+:root[data-theme="dark"] #dashboard .resource-form{
+  background:#3D3D3D;
+  border-color:#565656;
+}
+:root[data-theme="dark"] #dashboard .resource-item:hover,
+:root[data-theme="dark"] #dashboard .resource-item:focus-within,
+:root[data-theme="dark"] #dashboard .resource-item:nth-child(2):hover,
+:root[data-theme="dark"] #dashboard .resource-item:nth-child(3):hover{
+  background:#474747;border-color:#F6C543
+}
+:root[data-theme="dark"] #dashboard .record-latest{background:#3D3D3D}
+:root[data-theme="dark"] #dashboard .record:hover,
+:root[data-theme="dark"] #dashboard .record:focus-visible{background:#444444}
+:root[data-theme="dark"] #dashboard .record-arrow{
+  background:transparent;color:#F4F7FF;border-color:#626262
+}
+:root[data-theme="dark"] #dashboard .search,
+:root[data-theme="dark"] #dashboard .resource-form input{
+  background:#292929;color:#F4F7FF;border-color:#636363
+}
+:root[data-theme="dark"] #dashboard .feature-panel .pill.grey{
+  background:#4A4A4A;color:#F4F7FF
+}
+:root[data-theme="dark"] #dashboard .feature-panel .pill.red{
+  background:#4F383F;color:#FFC6D3
+}
+:root[data-theme="dark"] #dashboard .feature-panel .pill.yellow{
+  background:#514432;color:#F9D8A2
+}
+:root[data-theme="dark"] #dashboard .feature-panel .pill.green{
+  background:#304A42;color:#B1EDDC
+}
+:root[data-theme="dark"] #dashboard .panel-sub,
+:root[data-theme="dark"] #dashboard .stat-description,
+:root[data-theme="dark"] #dashboard .resource-body small,
+:root[data-theme="dark"] #dashboard .resource-body em,
+:root[data-theme="dark"] #dashboard .record-status,
+:root[data-theme="dark"] #dashboard .record-date{
+  color:#D2D2D2
+}

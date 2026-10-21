@@ -1,6 +1,6 @@
 /* Fixed left navbar. Impeccable-inspired clarity; existing brand and 12/10/8px radii preserved. */
 :root{--sidebar-width:246px;--sidebar-surface:#fff;--sidebar-line:#dde4ef;--sidebar-hover:#f0f4f9;--sidebar-active:#fff4cf;--sidebar-icon:#65738b}
-:root[data-theme="dark"]{--sidebar-surface:#1a243b;--sidebar-line:#344462;--sidebar-hover:#263852;--sidebar-active:#453b24;--sidebar-icon:#bfcbe2}
+:root[data-theme="dark"]{--sidebar-surface:#292929;--sidebar-line:#505050;--sidebar-hover:#3E3E3E;--sidebar-active:#51452F;--sidebar-icon:#CCCCCC}
 .sidebar-brand-link{display:flex;align-items:center;gap:12px;min-width:0}
 .sidebar-logo{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:8px;background:#f6c543;color:#172449;font-size:14px;font-weight:850;letter-spacing:-.055em}
 .sidebar-brand-text{display:flex;flex-direction:column;gap:1px;min-width:0}
@@ -31,10 +31,10 @@
 .sidebar-theme-name{font-size:14px;font-weight:600;text-align:left;flex:1}
 .sidebar-theme .theme-label{font-size:12px;font-weight:650;color:var(--muted)}
 .sidebar-note{font-size:12px;line-height:1.5;color:var(--muted);margin:13px 8px 0}
-:root[data-theme="dark"] .portal-aside-links .sidebar-nav-link.is-current,:root[data-theme="dark"] .portal-aside-links .sidebar-nav-link[aria-current="location"]{background:#453b24;color:#f4f7ff;box-shadow:inset 3px 0 #f6c543}
-:root[data-theme="dark"] .portal-aside-links .sidebar-nav-link:hover{background:#263852;color:#f4f7ff}
-:root[data-theme="dark"] .sidebar-theme{background:#202b49;border-color:#344462}
-:root[data-theme="dark"] .sidebar-theme:hover{background:#263852}
+:root[data-theme="dark"] .portal-aside-links .sidebar-nav-link.is-current,:root[data-theme="dark"] .portal-aside-links .sidebar-nav-link[aria-current="location"]{background:#51452F;color:#f4f7ff;box-shadow:inset 3px 0 #f6c543}
+:root[data-theme="dark"] .portal-aside-links .sidebar-nav-link:hover{background:#3E3E3E;color:#f4f7ff}
+:root[data-theme="dark"] .sidebar-theme{background:#343434;border-color:#505050}
+:root[data-theme="dark"] .sidebar-theme:hover{background:#424242}
 @media(min-width:701px){
 .page-wrap{max-width:1660px}
 .shell{display:grid!important;grid-template-columns:var(--sidebar-width) minmax(0,1fr)!important;padding:0!important;gap:0!important;align-items:stretch}
