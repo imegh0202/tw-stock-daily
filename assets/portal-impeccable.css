@@ -573,3 +573,110 @@ body{background:var(--portal-paper);font-family:Inter,"Noto Sans TC","PingFang T
 :root[data-theme="dark"] #dashboard .record-date{
   color:#D2D2D2
 }
+
+/* Featured report spotlight, 2026-10-21.
+   Only the latest brief gets a warm editorial spotlight; the rest of the
+   dark dashboard keeps the requested #343434 neutral cards. */
+:root{
+  --feature-warm-start:#4A4130;
+  --feature-warm-end:#343434;
+  --feature-gold:#F6C543;
+  --feature-gold-subtle:#EDD5A4;
+}
+#dashboard .feature-panel.top-panel,
+:root[data-theme="dark"] #dashboard .feature-panel.top-panel{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse 82% 92% at 103% -13%,rgba(246,197,67,.18) 0%,rgba(246,197,67,0) 74%),
+    linear-gradient(133deg,var(--feature-warm-start) 0%,#3C3932 51%,var(--feature-warm-end) 100%) !important;
+  background-image:
+    radial-gradient(ellipse 82% 92% at 103% -13%,rgba(246,197,67,.18) 0%,rgba(246,197,67,0) 74%),
+    linear-gradient(133deg,var(--feature-warm-start) 0%,#3C3932 51%,var(--feature-warm-end) 100%) !important;
+  border:1px solid #8E784B !important;
+  border-top:3px solid var(--feature-gold) !important;
+  border-radius:var(--portal-radius);
+  color:#F4F7FF;
+  box-shadow:0 14px 32px rgba(21,23,27,.18),inset 0 1px 0 rgba(255,244,218,.12) !important;
+}
+#dashboard .feature-panel.top-panel::after{
+  content:"";
+  display:block;
+  pointer-events:none;
+  position:absolute;
+  right:-65px;
+  top:-85px;
+  width:210px;
+  height:210px;
+  border:1px solid rgba(246,197,67,.13);
+  border-radius:50%;
+  z-index:-1;
+}
+#dashboard .feature-panel.top-panel .feature-kicker{
+  display:inline-flex;gap:9px;align-items:center;
+  color:var(--feature-gold);
+  font-size:12px;
+  letter-spacing:.13em;
+  font-weight:800;
+}
+#dashboard .feature-panel.top-panel .feature-kicker::before{
+  content:"";
+  width:7px;
+  height:7px;
+  background:var(--feature-gold);
+  border-radius:50%;
+  box-shadow:0 0 0 4px rgba(246,197,67,.10);
+  flex:none;
+}
+#dashboard .feature-panel.top-panel h2{
+  color:#FFFFFF;
+  font-size:clamp(24px,2.15vw,30px);
+  letter-spacing:-.035em;
+}
+#dashboard .feature-panel.top-panel .feature-edition{
+  color:#E9E2D3;
+}
+#dashboard .feature-panel.top-panel .feature-top,
+#dashboard .feature-panel.top-panel .feature-footer{
+  border-color:rgba(246,197,67,.24);
+}
+#dashboard .feature-panel.top-panel .feature-market .snapshot-label{
+  color:#EEE1C6;
+}
+#dashboard .feature-panel.top-panel .index-line .num{
+  color:#FFF0CE;
+  font-weight:830;
+  letter-spacing:-.045em;
+  text-shadow:0 1px 0 rgba(0,0,0,.10);
+}
+#dashboard .feature-panel.top-panel .feature-copy,
+#dashboard .feature-panel.top-panel .feature-caption,
+#dashboard .feature-panel.top-panel .feature-footer{
+  color:#E9E2D3;
+}
+#dashboard .feature-panel.top-panel .cta{
+  background:var(--feature-gold);
+  border-color:var(--feature-gold);
+  color:#172449;
+  border-radius:var(--portal-radius-control);
+  box-shadow:0 5px 16px rgba(10,11,12,.16);
+}
+#dashboard .feature-panel.top-panel .cta:hover,
+#dashboard .feature-panel.top-panel .cta:focus-visible{
+  background:#FFE19A;
+  border-color:#FFE19A;
+  color:#172449;
+  box-shadow:0 7px 20px rgba(10,11,12,.2);
+}
+/* The market-movement colors stay semantic and independent of gold branding. */
+#dashboard .feature-panel.top-panel .index-line .delta{color:#FFB7C4}
+#dashboard .feature-panel.top-panel .index-line .delta.up{color:#A5EBCF}
+@media(max-width:700px){
+  #dashboard .feature-panel.top-panel::after{
+    right:-97px;top:-116px;width:195px;height:195px
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #dashboard .feature-panel.top-panel .cta:hover{transform:none}
+}
