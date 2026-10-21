@@ -15,7 +15,10 @@
   --portal-space-xl:24px;
   --portal-space-2xl:32px;
   --portal-space-3xl:48px;
-  --portal-radius:18px;
+  --portal-radius:12px;
+  --portal-radius-secondary:10px;
+  --portal-radius-control:8px;
+  --portal-font-min:12px;
   --portal-shadow:0 10px 30px rgba(32,52,91,.045);
 }
 /* Match the shared Market Journal / Notion HTML dark-mode design tokens. */
@@ -400,4 +403,88 @@ body{background:var(--portal-paper);font-family:Inter,"Noto Sans TC","PingFang T
 }
 @media(prefers-reduced-motion:reduce){
   .feature-panel .cta:hover{transform:none}
+}
+
+/* Portal UI refinement · Notion HTML_Specification 2026-10-21
+   Primary cards 12px · nested cards 10px · controls 8px · font floor 12px.
+   Keep body copy >=16px whenever practical; use 12px only for secondary metadata. */
+#dashboard .panel{border-radius:var(--portal-radius);padding:20px 24px}
+#dashboard .feature-panel,
+#dashboard .pulse-panel{border-radius:var(--portal-radius)}
+#dashboard .resource-item,
+#dashboard .resource-form,
+#dashboard .quick-card,
+#dashboard .aside-hint{border-radius:var(--portal-radius-secondary)}
+#dashboard .resource-item{padding:17px;gap:12px}
+#dashboard .resource-body{overflow-wrap:anywhere}
+#dashboard .resource-mark,
+#dashboard .record-arrow,
+#dashboard .record-latest-tag,
+#dashboard .pill,
+#dashboard .feature-panel .pill{border-radius:var(--portal-radius-control)}
+#dashboard .cta,
+#dashboard .resource-btn,
+#dashboard .resource-form-actions button,
+#dashboard .search,
+#dashboard .resource-form input,
+.header-archive,
+.desktop-theme-toggle,
+.portal-aside-links a,
+.rail-links a,
+.rail-end .theme-toggle,
+.skip-link{border-radius:var(--portal-radius-control)}
+#dashboard .feature-panel .cta{border-radius:var(--portal-radius-control)}
+#dashboard .record{border-radius:0}
+#dashboard .event,
+#dashboard .sys-item{border-radius:0}
+#dashboard .resource-form{background:var(--card);border-style:solid}
+#dashboard .feature-top{padding-bottom:20px}
+#dashboard .feature-body{padding:21px 0;gap:22px}
+#dashboard .pulse-panel .donut-container{padding:6px 0 17px}
+#dashboard .records .record{min-height:73px;padding:14px 5px}
+#dashboard .cards-title{margin-bottom:16px}
+#dashboard .section-grid,
+#dashboard .summary-grid{gap:20px}
+#dashboard .panel h2{line-height:1.35}
+#dashboard .event h3,
+#dashboard .record-title,
+#dashboard .resource-body strong{overflow-wrap:anywhere}
+#dashboard .risk-list li{line-height:1.75}
+#dashboard .feature-copy{line-height:1.8}
+#dashboard .eyebrow,
+#dashboard .feature-kicker,
+#dashboard .section-kicker{font-size:12px;line-height:1.5;letter-spacing:.12em}
+#dashboard .feature-footer,
+#dashboard .resource-body em,
+#dashboard .record-date,
+#dashboard .aside-kpi span:last-child{font-size:12px;line-height:1.6}
+#dashboard .panel-sub,
+#dashboard .small-label,
+#dashboard .record-status,
+#dashboard .tree-sub,
+#dashboard .resource-body small{font-size:14px;line-height:1.65}
+#dashboard .panel p:not(.panel-sub):not(.feature-copy):not(.resource-note),
+#dashboard .risk-list li{overflow-wrap:anywhere}
+#dashboard .resource-btn,
+#dashboard .resource-form-actions button{min-height:44px}
+#dashboard a,
+#dashboard button,
+#dashboard input{scroll-margin-top:14px}
+@media(max-width:820px){
+  #dashboard .panel{padding:20px}
+  #dashboard .summary-grid,
+  #dashboard .section-grid{gap:15px}
+}
+@media(max-width:700px){
+  #dashboard .panel{padding:19px 17px}
+  #dashboard .content-top{margin-bottom:20px}
+  #dashboard .summary-grid,
+  #dashboard .section-grid{gap:14px;margin-bottom:14px}
+  #dashboard .record{gap:9px}
+  #dashboard .resource-item{padding:15px}
+}
+@media(max-width:430px){
+  #dashboard .panel{padding:18px 15px}
+  #dashboard .index-line .num{font-size:clamp(29px,8.5vw,34px)}
+  #dashboard .record-title{font-size:15px}
 }
