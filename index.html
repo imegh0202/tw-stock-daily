@@ -9,46 +9,46 @@
 <script src="./assets/theme.js"></script>
 <link rel="stylesheet" href="./assets/dashboard.css">
 <link rel="stylesheet" href="./assets/portal-impeccable.css?v=20261021-radius12">
+<link rel="stylesheet" href="./assets/portal-sidebar.css?v=20261021-leftnav">
 </head>
 <body>
 <a class="skip-link" href="#dashboard">跳至主要內容</a>
 <div class="page-wrap"><div class="shell">
-  <nav class="rail" aria-label="主要導覽">
-    <a class="brand-mark" href="./index.html" title="市場觀察紀錄" aria-label="返回入口首頁">↗</a>
+  <nav class="rail" aria-label="手機主要導覽">
     <div class="rail-links">
-      <a class="current" href="#dashboard" title="總覽" aria-label="總覽"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></a>
-      <a href="./archive.html" title="歷史日報" aria-label="歷史日報"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg></a>
-      <a href="./guide.html" title="投資理財知識庫" aria-label="投資理財知識庫"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M3 18V5a2 2 0 0 1 2-2h3c1.6 0 3 .6 4 2 1-1.4 2.4-2 4-2h3a2 2 0 0 1 2 2v13h-5c-1.6 0-3 .6-4 2-1-1.4-2.4-2-4-2H3Z"/></svg></a>
-      <a href="https://afa-investment-monitor.imeg0202.chatgpt.site" target="_blank" rel="noopener noreferrer" title="阿發｜投資觀察室（私人）" aria-label="管理資源"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10M15 10v10"/></svg></a>
+      <a class="current" href="#dashboard" title="總覽" aria-label="總覽"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="rail-label">總覽</span></a>
+      <a href="./archive.html" title="歷史日報" aria-label="歷史日報"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v12h14V8M10 12h4"/></svg><span class="rail-label">日報</span></a>
+      <a href="./guide.html" title="投資知識庫" aria-label="投資知識庫"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M3 18V5a2 2 0 0 1 2-2h3c1.6 0 3 .6 4 2 1-1.4 2.4-2 4-2h3a2 2 0 0 1 2 2v13h-5c-1.6 0-3 .6-4 2-1-1.4-2.4-2-4-2H3Z"/></svg><span class="rail-label">知識庫</span></a>
+      <a href="#resources" title="管理資源" aria-label="管理資源"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10M15 10v10"/></svg><span class="rail-label">資源</span></a>
     </div>
-    <div class="rail-end">
-      <button type="button" class="theme-toggle" data-theme-toggle title="切換深色模式" aria-label="切換深色模式"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">深色</span></button>
-    </div>
+    <div class="rail-end"><button type="button" class="theme-toggle" data-theme-toggle title="切換深色模式" aria-label="切換深色模式"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">深色</span></button></div>
   </nav>
-  <aside class="aside-card" aria-label="日報索引側欄">
-    <div class="aside-header"><h2>Report Library</h2><button type="button" class="desktop-theme-toggle" data-theme-toggle aria-label="切換深色模式" title="切換深色模式"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">深色</span></button></div>
-    <nav class="portal-aside-links" aria-label="入口快速導覽">
-      <a href="./index.html" aria-current="page"><span aria-hidden="true">▦</span>市場總覽</a>
-      <a href="./archive.html"><span aria-hidden="true">▤</span>歷史日報</a>
-      <a href="./guide.html"><span aria-hidden="true">▧</span>投資理財知識庫</a>
-      <a href="https://afa-investment-monitor.imeg0202.chatgpt.site" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◈</span>投資觀察室 ↗</a>
-      <a href="#resources"><span aria-hidden="true">▥</span>管理資源</a>
+  <aside class="aside-card" aria-label="網站左側選單">
+    <div class="sidebar-brand"><a href="./index.html" class="sidebar-brand-link" aria-label="Market Journal 市場觀察誌首頁"><span class="sidebar-logo" aria-hidden="true">MJ</span><span class="sidebar-brand-text"><strong>Market Journal</strong><small>市場觀察誌</small></span></a></div>
+    <nav class="portal-aside-links" aria-label="主要導覽">
+      <div class="sidebar-group"><div class="sidebar-group-label">工作台 <span>WORKSPACE</span></div>
+        <a class="sidebar-nav-link is-current" href="#dashboard" data-nav-section="dashboard" aria-current="location"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="sidebar-link-label">市場總覽</span></a>
+        <a class="sidebar-nav-link" href="#history" data-nav-section="history"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v6h5M9 14h6M9 18h6"/></svg><span class="sidebar-link-label">日報紀錄</span></a>
+        <a class="sidebar-nav-link" href="#events" data-nav-section="events"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 15h3"/></svg><span class="sidebar-link-label">事件追蹤</span></a>
+        <a class="sidebar-nav-link" href="#risks" data-nav-section="risks"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 17 6-6 4 4 8-9M15 6h6v6"/></svg><span class="sidebar-link-label">市場風險</span></a>
+      </div>
+      <div class="sidebar-group"><div class="sidebar-group-label">資料與工具 <span>LIBRARY</span></div>
+        <a class="sidebar-nav-link" href="./archive.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v12h14V8M10 12h4"/></svg><span class="sidebar-link-label">全部歷史日報</span></a>
+        <a class="sidebar-nav-link" href="./guide.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M3 18V5a2 2 0 0 1 2-2h3c1.6 0 3 .6 4 2 1-1.4 2.4-2 4-2h3a2 2 0 0 1 2 2v13h-5c-1.6 0-3 .6-4 2-1-1.4-2.4-2-4-2H3Z"/></svg><span class="sidebar-link-label">投資理財知識庫</span></a>
+        <a class="sidebar-nav-link" href="#resources" data-nav-section="resources"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10M15 10v10"/></svg><span class="sidebar-link-label">管理資源</span></a>
+        <a class="sidebar-nav-link" href="https://afa-investment-monitor.imeg0202.chatgpt.site" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M10 14 20 4"/><path d="M20 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/></svg><span class="sidebar-link-label">投資觀察室</span><span class="sidebar-external" aria-hidden="true">↗</span></a>
+      </div>
     </nav>
-    <div class="aside-kpi"><span>累積日報</span><span>REPORTS</span></div>
-    <div class="aside-total"><span id="total-count">—</span><span class="aside-unit">篇日報</span></div>
-    <hr class="line">
-    <div class="tree-title">⌄　日報檔案</div>
-    <div class="tree-sub"><span>本月日報</span><strong id="month-count">—</strong></div>
-    <div class="tree-sub"><span>最新日期</span><strong id="last-report">—</strong></div>
-    <div class="tree-sub"><span>市場狀態</span><strong id="risk-label">—</strong></div>
-    <div class="tree-title">⌄　市場風險分類</div>
-    <div class="tree-sub"><span>● 高風險日</span><strong id="high-count">—</strong></div>
-    <div class="tree-sub"><span>● 中風險日</span><strong id="mid-count">—</strong></div>
-    <div class="tree-sub"><span>● 其他觀察日</span><strong id="other-count">—</strong></div>
-
-    <div class="aside-hint"><strong>閱讀提醒</strong><p>本站記錄每日盤後觀察，非即時報價。行情與事件請以報告註明的資料來源為準。</p></div>
+    <div class="sidebar-footer">
+      <div class="sidebar-stats">
+        <div class="sidebar-stats-head"><span>日報資料庫</span><span>ARCHIVE</span></div>
+        <div class="sidebar-total"><strong id="total-count">—</strong><span>篇日報</span></div>
+        <div class="sidebar-last"><span>最新存檔</span><strong id="last-report">—</strong></div>
+      </div>
+      <button type="button" class="desktop-theme-toggle sidebar-theme" data-theme-toggle title="切換深色模式" aria-label="切換深色模式"><span class="theme-icon" aria-hidden="true">☾</span><span class="sidebar-theme-name">外觀模式</span><span class="theme-label">深色</span></button>
+      <p class="sidebar-note">盤後研究紀錄 · 非即時行情</p>
+    </div>
   </aside>
-
   <main id="dashboard" class="content">
     <header class="content-top">
       <div class="page-intro">
@@ -172,4 +172,5 @@
   </main>
 </div></div>
 <script src="./assets/dashboard.js" defer></script>
+<script src="./assets/portal-sidebar.js" defer></script>
 </body></html>
