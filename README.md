@@ -69,6 +69,18 @@ data/history.json        # 歷史清單（date 去重），首頁與 archive 都
 - **報告自動產生流程**：若沿用 `assets/style.css`，即可繼承新的共用配色。新生成的 HTML 不要寫死舊版的紫色、酒紅漸層或小字覆蓋樣式。
 - **維護規則**：新增網站 UI 應先選擇功能性色彩、確認 WCAG 對比與手機換行，避免所有卡片一律使用黃色。
 
+
+## Portal 首頁 Impeccable UI 改版（2026-10-21）
+
+- **設計方法**：按 Impeccable 的 Audit、Distill、Layout、Typeset、Polish 思路整理首頁；並未把網站套成 Impeccable 的固定範本或移除現有品牌識別。
+- **主畫面優先順序**：最新日報（指數、漲跌、風險標籤、閱讀入口）→ 歷史風險比例 → 近期日報／事件 → 風險摘要／系統資訊 → 管理資源。最新觀察是*存檔*，不可描述成即時行情。
+- **新增樣式**：`assets/portal-impeccable.css` 僅由 `index.html` 引入，放在 `assets/dashboard.css` 後。首頁特有的編排及色彩請優先改這份檔案；舊版 CSS 暫時保留相容性。
+- **資料綁定**：沿用 `assets/dashboard.js` 讀取 `data/latest.json` 和 `data/history.json`。無須 API Key、付費後端或外部 CSS/JS CDN。
+- **品牌與可讀性**：保留主金黃 `#F6C543`、深藍 `#252F60`、深色模式及 14px 最小字級；漲跌和市場風險使用語意色，不用品牌黃取代風險分類。
+- **手機**：保留底部導覽、搜尋及完整報告入口；提供鍵盤焦點、跳過導覽連結與 reduced-motion 降低動態效果。
+- **影響範圍**：此次未修改 `reports/`、`data/`、`guide.html`、`archive.html`、每日排程／HTML 產生方式，後續新增日報不需修改首頁。
+- **正式驗收**：仍需在部署後使用真實瀏覽器人工確認 360px、768px、桌機與深淺主題的視覺細節。
+
 ## 資料品質與安全
 
 - 優先使用官方原始資料，列出可點擊來源與觀測時間；未查證值留空。

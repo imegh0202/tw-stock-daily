@@ -26,7 +26,7 @@
     ["latest-report-link"].forEach(id=>{const a=$(id);if(a)a.href=href});
     set("data-asof",v.as_of?String(v.as_of).replace("T"," ").slice(0,16):"待核對");
     const snippets=Array.isArray(v.risks)?v.risks:[];
-    const box=$("risk-list");if(box){box.replaceChildren();if(!snippets.length){box.append(elm("p","empty","尚無今日風險摘要，請閱讀完整日報。"))}
+    const box=$("risk-list");if(box){box.replaceChildren();if(!snippets.length){box.append(elm("li","empty","尚無今日風險摘要，請閱讀完整日報。"))}
       snippets.slice(0,4).forEach(s=>{const li=elm("li"),dot=elm("span","bullet"),content=elm("span",null,s);li.append(dot,content);box.append(li)})}
     const events=Array.isArray(v.events)?v.events:[],container=$("event-list");
     if(container){container.replaceChildren();if(!events.length)container.append(elm("p","empty","尚無事件資料，日後由每日報告更新。"));
@@ -38,7 +38,6 @@
         card.append(hdr,elm("h3",null,e.event||"待確認"),elm("div","small-label",e.time_status?"時間待確認":"未來觀察事件"));container.append(card)
       })}
     set("event-count",events.length+" 項事件");
-    const prog=$("event-progress");if(prog)prog.style.width=Math.min(100,events.length*25)+"%";
   }
   function renderHistory(history,filter=""){
     const records=$("records");if(!records)return;
@@ -69,13 +68,11 @@
     });
   }
   function renderCounts(history){
-    set("total-count",String(history.length));set("donut-total",String(history.length));set("all-count",history.length+" 篇");
+    set("total-count",String(history.length));set("donut-total",String(history.length));
     const parts=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Taipei",year:"numeric",month:"2-digit"}).formatToParts(new Date());
     const month=parts.find(p=>p.type==="year").value+"-"+parts.find(p=>p.type==="month").value;
     const monthCount=history.filter(x=>(x.date||"").startsWith(month)).length;
     set("month-count",String(monthCount));set("month-count-foot",monthCount+" 篇 / 共 "+history.length+" 篇");
-    const p=history.length?Math.round(monthCount/history.length*100):0;
-    const bar=$("month-progress");if(bar)bar.style.width=p+"%";
     const high=history.filter(x=>x.risk_level==="high").length,
       mid=history.filter(x=>x.risk_level==="medium"||x.risk_level==="mid").length,
       other=history.length-high-mid;
