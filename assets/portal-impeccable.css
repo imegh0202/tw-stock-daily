@@ -18,14 +18,34 @@
   --portal-radius:18px;
   --portal-shadow:0 10px 30px rgba(32,52,91,.045);
 }
+/* Match the shared Market Journal / Notion HTML dark-mode design tokens. */
 :root[data-theme="dark"]{
+  color-scheme:dark;
   --portal-paper:#111827;
-  --portal-ink:#f4f7ff;
-  --portal-navy:#e5ecfc;
+  --portal-ink:#F4F7FF;
+  --portal-navy:#E5ECFC;
+  --portal-gold:#F6C543;
   --portal-line:#344462;
-  --portal-subtle:#1b2942;
-  --portal-surface:#202b49;
-  --portal-shadow:0 12px 34px rgba(0,0,0,.12);
+  --portal-subtle:#263852;
+  --portal-surface:#202B49;
+  --portal-shadow:0 12px 34px rgba(0,0,0,.16);
+  --page:#111827;
+  --card:#202B49;
+  --border:#344462;
+  --text:#F4F7FF;
+  --muted:#BFCBE2;
+  --heading:#F4F7FF;
+  --accent:#F6C543;
+  --accent-soft:#453B24;
+  --accent-ink:#FFE4A3;
+  --action-text:#172449;
+  --teal:#63C9B5;
+  --ice:#72B4E2;
+  --info:#72B4E2;
+  --warm:#E5A56C;
+  --risk-high:#F1A2B5;
+  --risk-mid:#E5A56C;
+  --risk-other:#63C9B5;
 }
 html{scroll-padding-top:22px}
 body{background:var(--portal-paper);font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif}
@@ -174,19 +194,145 @@ body{background:var(--portal-paper);font-family:Inter,"Noto Sans TC","PingFang T
 .resource-note{line-height:1.7;margin-top:17px;max-width:80ch}
 .foot{padding:24px 0 5px;margin-top:28px;border-top:1px solid var(--portal-line);font-size:14px;line-height:1.85;color:var(--muted)}
 #dashboard a:focus-visible,#dashboard button:focus-visible,#dashboard input:focus-visible,.aside-card a:focus-visible,.aside-card button:focus-visible,.rail a:focus-visible,.rail button:focus-visible{outline:3px solid var(--portal-gold);outline-offset:3px}
-/* Dark mode shares component structure rather than inverted literal white cards */
-:root[data-theme="dark"] .feature-panel{background:#252f60!important;color:#f5f7fe;border-color:#475b85}
-:root[data-theme="dark"] .pulse-panel{background:var(--card)!important}
+/* Dark mode — keep restrained editorial layout while echoing latest report-card palette.
+   Deep navy foundation, ice/teal/amber functional surfaces, no purple accents. */
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] .page-wrap{background:#111827;color:#F4F7FF}
 :root[data-theme="dark"] .aside-card{background:transparent}
-:root[data-theme="dark"] .record-latest{background:#253755}
-:root[data-theme="dark"] .record:hover{background:#403921}
-:root[data-theme="dark"] .record-arrow{background:transparent;color:var(--text);border-color:var(--border)}
-:root[data-theme="dark"] .record:hover .record-arrow{background:var(--portal-gold);color:#172449}
-:root[data-theme="dark"] .record-latest-tag{background:#443b28;color:#ffe5a7}
-:root[data-theme="dark"] .header-archive{background:var(--card);color:var(--text)}
-:root[data-theme="dark"] .resource-item{background:var(--portal-subtle)}
-:root[data-theme="dark"] .resource-item:hover{background:#403921}
-:root[data-theme="dark"] .search{background:#1a2740;color:var(--text)}
+:root[data-theme="dark"] .aside-header,
+:root[data-theme="dark"] .aside-kpi,
+:root[data-theme="dark"] .aside-hint{border-color:#344462}
+:root[data-theme="dark"] .aside-header h2,
+:root[data-theme="dark"] .aside-total{color:#F4F7FF}
+:root[data-theme="dark"] .portal-aside-links a:hover{background:#263852;color:#F4F7FF}
+:root[data-theme="dark"] .portal-aside-links a[aria-current="page"]{
+  background:#453B24;color:#F4F7FF;box-shadow:inset 3px 0 #F6C543
+}
+:root[data-theme="dark"] .desktop-theme-toggle,
+:root[data-theme="dark"] .header-archive{
+  background:#263852;color:#F4F7FF;border-color:#405575
+}
+:root[data-theme="dark"] .desktop-theme-toggle:hover,
+:root[data-theme="dark"] .header-archive:hover{
+  background:#314967;border-color:#F6C543;color:#F4F7FF
+}
+:root[data-theme="dark"] .indicator-dot{background:#63C9B5}
+:root[data-theme="dark"] .title-period{color:#F6C543}
+/* Latest market brief: familiar deep-blue report hero and gold action. */
+:root[data-theme="dark"] .feature-panel,
+:root[data-theme="dark"] .feature-panel:first-child{
+  background:linear-gradient(145deg,#252F60 0%,#263C63 69%,#2E4B6C 100%)!important;
+  color:#F4F7FF;border-color:#455B80;box-shadow:0 14px 32px rgba(0,0,0,.20)
+}
+:root[data-theme="dark"] .feature-kicker{color:#F6C543}
+:root[data-theme="dark"] .feature-panel h2,
+:root[data-theme="dark"] .feature-market .num{color:#F4F7FF}
+:root[data-theme="dark"] .feature-edition,
+:root[data-theme="dark"] .feature-copy,
+:root[data-theme="dark"] .feature-caption,
+:root[data-theme="dark"] .feature-market .snapshot-label,
+:root[data-theme="dark"] .feature-footer{color:#D4DEF2}
+:root[data-theme="dark"] .feature-panel .pill.red{background:#49303B;color:#F1A2B5}
+:root[data-theme="dark"] .feature-panel .pill.yellow{background:#493726;color:#F7D3A8}
+:root[data-theme="dark"] .feature-panel .pill.green{background:#1C3C3B;color:#A5EDD7}
+:root[data-theme="dark"] .feature-panel .pill.grey{background:#344C73;color:#DFE9FC}
+:root[data-theme="dark"] .feature-panel .cta{
+  background:#F6C543;color:#172449;border-color:#F6C543
+}
+:root[data-theme="dark"] .feature-panel .cta:hover,
+:root[data-theme="dark"] .feature-panel .cta:focus-visible{
+  background:#F9D876;color:#172449;border-color:#F9D876
+}
+/* Meaningful card tones match reports: ice blue, teal, muted blue, amber. */
+:root[data-theme="dark"] .pulse-panel,
+:root[data-theme="dark"] .pulse-panel:last-child{
+  background:#1B3850!important;border-color:#345D77;border-top:3px solid #72B4E2
+}
+:root[data-theme="dark"] .pulse-panel .donut-hole{background:#1B3850}
+:root[data-theme="dark"] .pulse-panel .section-kicker,
+:root[data-theme="dark"] .pulse-symbol{color:#72B4E2}
+:root[data-theme="dark"] #history{
+  background:#202B49;border-color:#344462;border-top:3px solid #72B4E2
+}
+:root[data-theme="dark"] #events{
+  background:#1C3C3B;border-color:#35615B;border-top:3px solid #63C9B5
+}
+:root[data-theme="dark"] #risks{
+  background:#263652;border-color:#405774;border-top:3px solid #F1A2B5
+}
+:root[data-theme="dark"] #system{
+  background:#263852;border-color:#3B5674;border-top:3px solid #E5A56C
+}
+:root[data-theme="dark"] #resources{
+  background:#202B49;border-color:#344462;border-top:3px solid #F6C543
+}
+:root[data-theme="dark"] .record-latest{background:#263852}
+:root[data-theme="dark"] .record:hover,
+:root[data-theme="dark"] .record:focus-visible{background:#314967}
+:root[data-theme="dark"] .record-arrow{
+  background:transparent;color:#F4F7FF;border-color:#455B7B
+}
+:root[data-theme="dark"] .record:hover .record-arrow,
+:root[data-theme="dark"] .record:focus-visible .record-arrow{
+  background:#F6C543;color:#172449;border-color:#F6C543
+}
+:root[data-theme="dark"] .record-latest-tag{background:#453B24;color:#FFE4A3}
+:root[data-theme="dark"] .record-date,
+:root[data-theme="dark"] .record-status,
+:root[data-theme="dark"] .event-header,
+:root[data-theme="dark"] .event .small-label,
+:root[data-theme="dark"] #system .sys-item>span:not(.status-dot){color:#BFCBE2}
+:root[data-theme="dark"] .event h3,
+:root[data-theme="dark"] .record-title,
+:root[data-theme="dark"] .sys-item strong{color:#F4F7FF}
+:root[data-theme="dark"] .event-priority.high{color:#F1A2B5}
+:root[data-theme="dark"] .event-priority.medium{color:#E5A56C}
+:root[data-theme="dark"] .event-priority.low{color:#63C9B5}
+:root[data-theme="dark"] #risks .risk-list .bullet{background:#F1A2B5}
+:root[data-theme="dark"] .search,
+:root[data-theme="dark"] .resource-form input{
+  background:#17263D;color:#F4F7FF;border-color:#455B7B
+}
+:root[data-theme="dark"] .search::placeholder,
+:root[data-theme="dark"] .resource-form input::placeholder{color:#BFCBE2}
+:root[data-theme="dark"] .resource-form{background:#263852;border-color:#455B7B}
+:root[data-theme="dark"] .resource-item{background:#263852;border-color:#405978}
+:root[data-theme="dark"] .resource-item:nth-child(2){
+  background:#1C3C3B;border-color:#35615B
+}
+:root[data-theme="dark"] .resource-item:nth-child(3){
+  background:#1B3850;border-color:#345D77
+}
+:root[data-theme="dark"] .resource-item:hover,
+:root[data-theme="dark"] .resource-item:focus-within,
+:root[data-theme="dark"] .resource-item:nth-child(2):hover,
+:root[data-theme="dark"] .resource-item:nth-child(3):hover{
+  background:#314967;border-color:#F6C543
+}
+:root[data-theme="dark"] .resource-body strong{color:#F4F7FF}
+:root[data-theme="dark"] .resource-body small,
+:root[data-theme="dark"] .resource-body em{color:#CED9E9}
+:root[data-theme="dark"] .resource-btn,
+:root[data-theme="dark"] .resource-form-actions button{
+  background:#F6C543;color:#172449;border-color:#F6C543
+}
+:root[data-theme="dark"] .resource-btn-light,
+:root[data-theme="dark"] .resource-form-actions button+button{
+  background:#453B24;color:#FFE4A3;border:1px solid #705C30
+}
+:root[data-theme="dark"] .rail{
+  background:#202B49;border-color:#344462
+}
+:root[data-theme="dark"] .rail-links a,
+:root[data-theme="dark"] .rail-end .theme-toggle{color:#D4DEF2}
+:root[data-theme="dark"] .rail-links a.current{
+  background:#F6C543;color:#172449;border-color:#F6C543
+}
+:root[data-theme="dark"] .rail-links a:hover,
+:root[data-theme="dark"] .rail-end .theme-toggle:hover{
+  background:#344C73;color:#F4F7FF
+}
+:root[data-theme="dark"] .foot{border-color:#344462;color:#BFCBE2}
 /* Responsive: dashboard remains a reading experience, not a shrunken desktop */
 @media(min-width:1021px){
   .shell{grid-template-columns:253px minmax(0,1fr);gap:35px;padding:18px 32px 40px}
