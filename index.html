@@ -8,8 +8,10 @@
 <meta name="description" content="每日市場資訊入口網站，快速閱讀最新日報、歷史市場紀錄、風險摘要與重要事件。">
 <script src="./assets/theme.js"></script>
 <link rel="stylesheet" href="./assets/dashboard.css">
+<link rel="stylesheet" href="./assets/portal-impeccable.css">
 </head>
 <body>
+<a class="skip-link" href="#dashboard">跳至主要內容</a>
 <div class="page-wrap"><div class="shell">
   <nav class="rail" aria-label="主要導覽">
     <a class="brand-mark" href="./index.html" title="市場觀察紀錄" aria-label="返回入口首頁">↗</a>
@@ -33,7 +35,7 @@
       <a href="#resources"><span aria-hidden="true">▥</span>管理資源</a>
     </nav>
     <div class="aside-kpi"><span>累積日報</span><span>REPORTS</span></div>
-    <div class="aside-total"><span id="total-count">1</span> <span style="font-size:14px;color:#8d97a6;font-weight:550">篇</span></div>
+    <div class="aside-total"><span id="total-count">—</span><span class="aside-unit">篇日報</span></div>
     <hr class="line">
     <div class="tree-title">⌄　日報檔案</div>
     <div class="tree-sub"><span>本月日報</span><strong id="month-count">—</strong></div>
@@ -44,57 +46,86 @@
     <div class="tree-sub"><span>● 中風險日</span><strong id="mid-count">—</strong></div>
     <div class="tree-sub"><span>● 其他觀察日</span><strong id="other-count">—</strong></div>
 
-    <div class="aside-hint"><strong>日報保存方式</strong><p>最新完整報告可由右側卡片開啟；過往日期集中於「歷史日報」。網站入口網址固定不變。</p></div>
+    <div class="aside-hint"><strong>閱讀提醒</strong><p>本站記錄每日盤後觀察，非即時報價。行情與事件請以報告註明的資料來源為準。</p></div>
   </aside>
 
   <main id="dashboard" class="content">
-    <div class="content-top">
-      <div><div class="eyebrow">MARKET JOURNAL · DAILY REVIEW</div><h1>市場觀察誌</h1></div>
-      
-    </div>
+    <header class="content-top">
+      <div class="page-intro">
+        <div class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> MARKET JOURNAL / TAIWAN</div>
+        <h1>市場觀察誌<span class="title-period" aria-hidden="true">.</span></h1>
+        <p class="page-lede">盤後趨勢、風險事件與每日紀錄，整理在同一個閱讀入口。</p>
+      </div>
+      <div class="header-actions">
+        <span class="archive-indicator"><span class="indicator-dot" aria-hidden="true"></span> 每日盤後存檔</span>
+        <a class="header-archive" href="./archive.html">瀏覽歷史日報 <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
     <div class="summary-grid">
-      <section class="panel top-panel" aria-labelledby="heading-pulse">
-        <div class="panel-top-row"><div><h2 id="heading-pulse">Market Pulse</h2><div class="panel-sub">市場風險分布 · 日報累積統計</div></div><span class="small-label">依歷史日報分類</span></div>
+      <section class="panel top-panel feature-panel" aria-labelledby="heading-latest">
+        <div class="feature-top">
+          <div><div class="feature-kicker">LATEST MARKET BRIEF</div><h2 id="heading-latest">最新市場觀察</h2></div>
+          <span class="feature-edition" id="snapshot-label">載入最新日報…</span>
+        </div>
+        <div class="feature-body">
+          <div class="feature-market">
+            <div class="snapshot-label">臺灣加權指數 · 日報存檔收盤值</div>
+            <div class="index-line"><strong id="latest-taiex" class="num">—</strong><span id="latest-change" class="delta">—</span></div>
+            <div class="feature-risk-row"><span class="feature-caption">當日風險觀察</span><span id="latest-risk" class="pill grey">載入中</span></div>
+          </div>
+          <div class="feature-action">
+            <p class="feature-copy">從最新一期報告快速掌握市場方向、資金動態，以及值得追蹤的下一個事件。</p>
+            <a id="latest-report-link" class="cta" href="./reports/2026-10-20.html">閱讀完整市場日報 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="feature-footer"><span>ARCHIVED MARKET DATA</span><span>以報告記載的來源及時間為準 · 非即時行情</span></div>
+      </section>
+      <section class="panel top-panel pulse-panel" aria-labelledby="heading-pulse">
+        <div class="panel-top-row">
+          <div><div class="section-kicker">RISK DISTRIBUTION</div><h2 id="heading-pulse">市場風險分布</h2><p class="panel-sub">依歷史日報風險等級彙整</p></div>
+          <span class="pulse-symbol" aria-hidden="true">◎</span>
+        </div>
         <div class="overview-layout">
           <div class="donut-container">
-            <div id="donut" class="donut" role="img" aria-label="市場風險比例圓環圖"><div class="donut-hole"><span id="donut-total" class="donut-number">1</span><span class="donut-note">日報總數</span></div></div>
-            <div class="legend"><div class="legend-item"><span class="dot d-high"></span> 高風險日</div><div class="legend-item"><span class="dot d-medium"></span> 中風險日</div><div class="legend-item"><span class="dot d-other"></span> 其他狀態</div></div>
+            <div id="donut" class="donut" role="img" aria-label="市場風險比例圓環圖"><div class="donut-hole"><span id="donut-total" class="donut-number">—</span><span class="donut-note">已收錄日報</span></div></div>
+            <div class="legend">
+              <div class="legend-item"><span class="dot d-high"></span> 高風險日</div>
+              <div class="legend-item"><span class="dot d-medium"></span> 中風險日</div>
+              <div class="legend-item"><span class="dot d-other"></span> 其他觀察日</div>
+            </div>
           </div>
-          <div class="overview-stat"><div class="small-label">最新市場觀察</div><div id="latest-risk" class="pill grey" style="margin-top:10px">載入中</div><div class="stat-big" id="latest-date">—</div><div class="stat-description">最新日報包含法人、匯率、族群輪動、未來風險事件與情境分析；完整內容請由右側卡片進入。</div></div>
+          <div class="overview-stat">
+            <span class="small-label">最新存檔日期</span>
+            <div class="stat-big" id="latest-date">—</div>
+            <p class="stat-description">風險分類是日報中的觀察標籤，不代表投資建議或市場預測。</p>
+          </div>
         </div>
-      </section>
-      <section class="panel top-panel" aria-labelledby="heading-latest">
-        <div class="panel-top-row"><div><h2 id="heading-latest">最新觀察紀錄</h2><div class="panel-sub" id="snapshot-label">載入中</div></div><span class="small-label">MARKET INDEX</span></div>
-        <div class="snapshot">
-          <div><div class="snapshot-label">市場指標 · 歷史存檔</div><div class="num" id="latest-taiex">—</div><div class="delta" id="latest-change">—</div></div>
-          <div class="latest-cta"><a id="latest-report-link" class="cta" href="./reports/2026-10-15.html">閱讀完整分析 ↗</a><span class="ghost-link">每日 HTML 獨立保存</span></div>
+        <div class="pulse-bottom">
+          <div><span>本月收錄</span><strong id="month-count-foot">—</strong></div>
+          <div><span>近期追蹤事件</span><strong id="event-count">—</strong></div>
         </div>
-        <div class="quick-grid">
-          <div class="quick-card"><h3>本月日報收錄</h3><p class="q-detail"><strong id="month-count-foot">—</strong></p><div class="progress"><div id="month-progress" style="width:0"></div></div><div class="quick-foot">占目前歷史存檔比例</div></div>
-          <div class="quick-card"><h3>未來事件提醒</h3><p class="q-detail" id="event-count">—</p><div class="progress event"><div id="event-progress" style="width:0%"></div></div><div class="quick-foot">詳見下方事件日曆</div></div>
-        </div>
-        <div class="small-label">畫面依 GitHub JSON 呈現，請以日報內所列來源核對行情與事件。</div>
+        <div class="visual-only-progress" aria-hidden="true"><span id="month-progress"></span><span id="event-progress"></span></div>
       </section>
     </div>
     <div class="section-grid">
       <section class="panel" id="history" aria-labelledby="heading-records">
-        <div class="cards-title"><div><h2 id="heading-records">每日報告紀錄</h2><div class="panel-sub">包含最新與歷史紀錄 · 點選日期閱讀完整內容</div></div><input id="search-report" class="search" type="search" placeholder="搜尋日期..." aria-label="搜尋日報"></div>
+        <div class="cards-title"><div><h2 id="heading-records">每日報告紀錄</h2><div class="panel-sub">近期 8 篇 · 點選日期閱讀完整內容</div></div><input id="search-report" class="search" type="search" placeholder="搜尋日期..." aria-label="搜尋日報"></div>
         <div id="records" class="records"><p class="empty">正在載入每日紀錄…</p></div>
-        
+        <a class="view-all-link" href="./archive.html">查看全部歷史日報 <span aria-hidden="true">→</span></a>
       </section>
       <section class="panel" id="events" aria-labelledby="heading-events">
-        <div class="cards-title"><div><h2 id="heading-events">重要事件觀察</h2><div class="panel-sub">近期風險日曆 · 依最新日報彙整</div></div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div>
+        <div class="cards-title"><div><h2 id="heading-events">重要事件觀察</h2><div class="panel-sub">依最新日報整理的追蹤事項</div></div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div>
         <div id="event-list" class="event-cards"><p class="empty">載入事件日曆中...</p></div>
       </section>
     </div>
     <div class="section-grid">
       <section class="panel" id="risks">
-        <div class="cards-title"><div><h2>市場重點與風險</h2><div class="panel-sub">直接取自最新一篇分析報告</div></div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></div>
+        <div class="cards-title"><div><h2>市場重點與風險</h2><div class="panel-sub">最新一期日報的關鍵觀察</div></div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></div>
         <ul class="risk-list" id="risk-list"><li><span class="bullet"></span><span>正在載入今日觀察...</span></li></ul>
         
       </section>
       <section class="panel" id="system">
-        <div class="cards-title"><div><h2>系統資訊</h2><div class="panel-sub">公開網站 · 無需另外付費主機</div></div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M2 12h3M19 12h3M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2"/></svg></div>
+        <div class="cards-title"><div><h2>系統資訊</h2><div class="panel-sub">資料載入與網站運作狀態</div></div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M2 12h3M19 12h3M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2"/></svg></div>
         <div class="sys-card">
           <div class="sys-item"><span class="status-dot warn" id="status-dot"></span><span>資料載入</span><strong id="feed-status">連線中</strong></div>
           <div class="sys-item"><span class="status-dot"></span><span>靜態網站</span><strong>GitHub Pages</strong></div>
@@ -105,7 +136,7 @@
     </div>
     <section class="panel resources-panel" id="resources" aria-labelledby="heading-resources">
       <div class="cards-title">
-        <div><h2 id="heading-resources">管理資源</h2><div class="panel-sub">常用工具與來源入口 · 不在網站展示私人試算表內容</div></div>
+        <div><h2 id="heading-resources">管理資源</h2><div class="panel-sub">資料來源與常用工具 · 私人內容不會公開顯示</div></div>
       </div>
       <div class="resource-grid">
         <a class="resource-item" href="https://afa-investment-monitor.imeg0202.chatgpt.site" target="_blank" rel="noopener noreferrer" aria-label="開啟阿發投資觀察室，私人網站需登入">
