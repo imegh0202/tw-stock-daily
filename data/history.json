@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-21",
+    "title": "2026/10/21 市場紀錄",
+    "url": "reports/2026-10-21.html",
+    "market_state": "反彈但未確認轉強",
+    "risk_level": "medium",
+    "taiex_close": 46887.77,
+    "change_pct": 1.28,
+    "fx_usd_twd": null
+  },
+  {
     "date": "2026-10-20",
     "title": "2026/10/20 市場紀錄",
     "url": "reports/2026-10-20.html",
