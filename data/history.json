@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-10-22",
+    "title": "2026/10/22 市場紀錄",
+    "url": "reports/2026-10-22.html",
+    "market_state": "開高走低、外資與市場廣度同步轉弱",
+    "risk_level": "high",
+    "taiex_close": 46041.43,
+    "change_pct": -1.81,
+    "fx_usd_twd": null
+  },
+  {
     "date": "2026-10-21",
     "title": "2026/10/21 市場紀錄",
     "url": "reports/2026-10-21.html",
