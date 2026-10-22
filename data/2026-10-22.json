@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-22",
+  "trading_day": true,
+  "title": "2026/10/22 市場紀錄",
+  "url": "reports/2026-10-22.html",
+  "market_state": "開高走低、外資與市場廣度同步轉弱",
+  "risk_level": "high",
+  "taiex": {
+    "close": 46041.43,
+    "change_points": -846.34,
+    "change_pct": -1.81,
+    "open": 46942.75,
+    "high": 47332.18,
+    "low": 46041.43,
+    "turnover_100m_twd": 8792.3,
+    "advancers": 254,
+    "decliners": 759,
+    "unchanged": 90,
+    "turnover_scope": "中央社集中市場收盤報導"
+  },
+  "institutions": {
+    "foreign_100m_twd": -816.56,
+    "investment_trust_100m_twd": 88.75,
+    "dealers_100m_twd": -273.78,
+    "total_100m_twd": -1001.59
+  },
+  "tsmc": {
+    "ticker": "2330",
+    "close": 2385,
+    "change_points": -35,
+    "change_pct": -1.45
+  },
+  "usd_twd": null,
+  "usd_twd_status": "10/22正式收盤待確認；午盤32.566不可當作正式收盤",
+  "fx_usd_twd_noon": 32.566,
+  "risks": [
+    "指數收在當日最低點",
+    "上市下跌759家、上漲254家",
+    "外資賣超816.56億元"
+  ],
+  "next_trading_day": "2026-10-23",
+  "data_quality": {
+    "status": "沿用既有HTML草稿，未重新查證行情",
+    "unverified_fields": [
+      "USD/TWD正式收盤"
+    ]
+  },
+  "as_of": "2026-10-22T15:12:00+08:00"
+}
