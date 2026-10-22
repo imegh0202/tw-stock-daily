@@ -9,43 +9,64 @@
 <script src="./assets/theme.js"></script>
 <link rel="stylesheet" href="./assets/dashboard.css">
 <link rel="stylesheet" href="./assets/guide.css">
+<link rel="stylesheet" href="./assets/portal-sidebar.css?v=20261022">
+<link rel="stylesheet" href="./assets/knowledge-portal.css?v=20261022">
 </head>
 <body>
+<a class="skip-link" href="#top">跳至主要內容</a>
 <div class="page-wrap"><div class="shell">
-<nav class="rail" aria-label="網站導覽">
-<a class="brand-mark" href="./index.html" aria-label="市場觀察紀錄首頁" title="市場觀察紀錄">↗</a>
-<div class="rail-links">
-<a href="./index.html" aria-label="市場總覽" title="市場總覽"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></a>
-<a href="./archive.html" aria-label="歷史日報" title="歷史日報"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg></a>
-<a class="current" href="./guide.html" aria-current="page" aria-label="投資理財知識庫" title="投資理財知識庫"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M3 18V5a2 2 0 0 1 2-2h3c1.6 0 3 .6 4 2 1-1.4 2.4-2 4-2h3a2 2 0 0 1 2 2v13h-5c-1.6 0-3 .6-4 2-1-1.4-2.4-2-4-2H3Z"/></svg></a>
-</div>
-<div class="rail-end"><button type="button" class="theme-toggle" data-theme-toggle aria-label="切換深色模式"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">深色</span></button></div>
-</nav>
-<aside class="aside-card kb-aside" aria-label="知識庫章節">
-<h2>Knowledge Base</h2><div class="kb-small">投資理財知識庫 · 章節目錄</div>
-<nav class="kb-side-nav" aria-label="章節目錄">
-<a href="#chapter-01"><b>01</b>市場、ETF 與複利</a>
-<a href="#chapter-02"><b>02</b>目標與風險承受度</a>
-<a href="#chapter-03"><b>03</b>資產配置</a>
-<a href="#chapter-04"><b>04</b>ETF 與基金分析</a>
-<a href="#chapter-05"><b>05</b>個股基本面</a>
-<a href="#chapter-06"><b>06</b>總體經濟</a>
-<a href="#chapter-07"><b>07</b>投資組合風險</a>
-<a href="#chapter-08"><b>08</b>投資決策紀錄</a>
-<a href="#long-short-basics"><b>↕</b>做多與做空教學</a>
-<a href="#long-short-examples"><b>✓</b>多空實戰案例與測驗</a>
-<a href="#dictionary"><b>＋</b>常用術語速查</a>
-<a href="#sources"><b>↗</b>資料與來源</a>
-</nav>
-<div class="kb-side-foot">閱讀方式：先建立觀念，再檢查風險，最後形成決策紀錄。<br><br><a href="./index.html">← 返回每日觀察</a></div>
-</aside>
-<main class="content kb-content" id="top">
-<div class="content-top"><div><div class="eyebrow">MARKET JOURNAL · LEARNING SPACE</div></div><div class="top-tools"><a href="./index.html">市場總覽 ↗</a><a href="./archive.html">歷史日報 ↗</a></div></div>
+  <nav class="rail" aria-label="手機主要導覽">
+    <div class="rail-links">
+      <a href="./index.html" aria-label="總覽" title="總覽"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="rail-label">總覽</span></a>
+      <a href="./archive.html" aria-label="日報" title="歷史日報"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v6h5M9 14h6M9 18h6"/></svg><span class="rail-label">日報</span></a>
+      <a class="current" href="./guide.html" aria-current="page" aria-label="知識庫" title="知識庫"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M3 18V5a2 2 0 0 1 2-2h3c1.6 0 3 .6 4 2 1-1.4 2.4-2 4-2h3a2 2 0 0 1 2 2v13h-5c-1.6 0-3 .6-4 2-1-1.4-2.4-2-4-2H3Z"/></svg><span class="rail-label">知識庫</span></a>
+      <a href="./index.html#resources" aria-label="資源" title="管理資源"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10M15 10v10"/></svg><span class="rail-label">資源</span></a>
+    </div>
+    <div class="rail-end"><button type="button" class="theme-toggle" data-theme-toggle aria-label="切換深色模式"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">深色</span></button></div>
+  </nav>
+  <aside class="aside-card kb-aside-portal" aria-label="知識庫導覽">
+    <div class="sidebar-brand"><a href="./index.html" class="sidebar-brand-link" aria-label="Market Journal 市場觀察誌首頁"><span class="sidebar-logo" aria-hidden="true">MJ</span><span class="sidebar-brand-text"><strong>Market Journal</strong><small>市場觀察誌</small></span></a></div>
+    <nav class="portal-aside-links" aria-label="知識庫功能與章節目錄">
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">工作台 <span>WORKSPACE</span></div>
+        <a class="sidebar-nav-link" href="./index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="sidebar-link-label">市場總覽</span></a>
+        <a class="sidebar-nav-link" href="./archive.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v6h5M9 14h6M9 18h6"/></svg><span class="sidebar-link-label">歷史日報</span></a>
+        <a class="sidebar-nav-link is-current" href="./guide.html" aria-current="page"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14M3 18V5a2 2 0 0 1 2-2h3c1.6 0 3 .6 4 2 1-1.4 2.4-2 4-2h3a2 2 0 0 1 2 2v13h-5c-1.6 0-3 .6-4 2-1-1.4-2.4-2-4-2H3Z"/></svg><span class="sidebar-link-label">投資理財知識庫</span></a>
+      </div>
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">學習章節 <span>CHAPTERS</span></div>
+          <a class="sidebar-nav-link kb-chapter-link" href="#chapter-01" data-kb-section="chapter-01"><span class="kb-nav-index">01</span><span class="sidebar-link-label">市場、ETF 與複利</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#chapter-02" data-kb-section="chapter-02"><span class="kb-nav-index">02</span><span class="sidebar-link-label">目標與風險承受度</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#chapter-03" data-kb-section="chapter-03"><span class="kb-nav-index">03</span><span class="sidebar-link-label">資產配置</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#chapter-04" data-kb-section="chapter-04"><span class="kb-nav-index">04</span><span class="sidebar-link-label">ETF 與基金</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#chapter-05" data-kb-section="chapter-05"><span class="kb-nav-index">05</span><span class="sidebar-link-label">個股基本面</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#chapter-06" data-kb-section="chapter-06"><span class="kb-nav-index">06</span><span class="sidebar-link-label">總體經濟</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#chapter-07" data-kb-section="chapter-07"><span class="kb-nav-index">07</span><span class="sidebar-link-label">投資組合風險</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#chapter-08" data-kb-section="chapter-08"><span class="kb-nav-index">08</span><span class="sidebar-link-label">投資決策紀錄</span></a>
+      </div>
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">延伸內容 <span>TOPICS</span></div>
+          <a class="sidebar-nav-link kb-chapter-link" href="#long-short-basics" data-kb-section="long-short-basics"><span class="kb-nav-index">↕</span><span class="sidebar-link-label">多空觀念教學</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#long-short-examples" data-kb-section="long-short-examples"><span class="kb-nav-index">✓</span><span class="sidebar-link-label">案例與測驗</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#dictionary" data-kb-section="dictionary"><span class="kb-nav-index">＋</span><span class="sidebar-link-label">術語速查</span></a>
+          <a class="sidebar-nav-link kb-chapter-link" href="#sources" data-kb-section="sources"><span class="kb-nav-index">↗</span><span class="sidebar-link-label">資料來源</span></a>
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <button type="button" class="desktop-theme-toggle sidebar-theme" data-theme-toggle aria-label="切換深色模式"><span class="theme-icon" aria-hidden="true">☾</span><span class="sidebar-theme-name">外觀模式</span><span class="theme-label">深色</span></button>
+      <p class="sidebar-note">觀念學習 · 風險檢查 · 決策紀錄</p>
+    </div>
+  </aside>
+  <main class="content kb-content" id="top">
+    <div class="content-top kb-page-head">
+      <div class="eyebrow">MARKET JOURNAL <span aria-hidden="true">/</span> LEARNING SPACE</div>
+      <span class="kb-page-hint">RESEARCH LIBRARY · 08 CHAPTERS</span>
+    </div>
 <header class="kb-hero">
-<div class="eyebrow">長期有效的投資知識 · SYSTEMATIC LEARNING</div>
+<div class="eyebrow">KNOWLEDGE LIBRARY · INVESTMENT FUNDAMENTALS</div>
 <h1>投資理財知識庫</h1>
 <p>把每天閱讀的市場資訊，逐步轉化成一套能反覆使用的投資判斷方法。這裡不提供明牌或預測，而是釐清報酬如何產生、風險如何承擔，以及如何做出有紀錄的決策。</p>
-<div class="kb-tags"><span class="kb-tag">08 個主題章節</span><span class="kb-tag">從觀念到實作</span><span class="kb-tag neutral">內容更新：2026-10-18</span><span class="kb-tag neutral">不含即時投資建議</span></div>
+<div class="kb-tags"><span class="kb-tag">08 個主題章節</span><span class="kb-tag">從觀念到實作</span><span class="kb-tag neutral">內容整理：2026-10-18</span><span class="kb-tag neutral">不含即時投資建議</span></div>
 </header>
 <nav class="kb-mobile-nav" aria-label="手機版章節捷徑">
   <a href="#chapter-01">01 基礎觀念</a><a href="#chapter-02">02 風險承受度</a><a href="#chapter-03">03 資產配置</a><a href="#chapter-04">04 ETF／基金</a>
@@ -406,5 +427,6 @@ input.addEventListener("input",()=>{
 });
 })();
 </script>
+<script src="./assets/knowledge-nav.js?v=20261022" defer></script>
 </body>
 </html>
