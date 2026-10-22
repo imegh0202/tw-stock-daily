@@ -1,383 +1,49 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "trading_day": true,
-  "title": "2026/10/21 市場紀錄",
-  "url": "reports/2026-10-21.html",
-  "market_state": "反彈但未確認轉強",
-  "risk_level": "medium",
+  "title": "2026/10/22 市場紀錄",
+  "url": "reports/2026-10-22.html",
+  "market_state": "開高走低、外資與市場廣度同步轉弱",
+  "risk_level": "high",
   "taiex": {
-    "close": 46887.77,
-    "change_points": 594.84,
-    "change_pct": 1.28,
-    "open": 46454.33,
-    "high": 47254.93,
-    "low": 46454.33,
-    "turnover_100m_twd": 8331.91,
-    "turnover_scope": "中央社集中市場收盤新聞",
-    "advancers": 610,
-    "decliners": 384,
-    "unchanged": 113,
-    "turnover_billion_twd": 833.191,
-    "turnover_unit": "億新台幣",
-    "market_breadth_scope": "中央社收盤統計，1,107家"
+    "close": 46041.43,
+    "change_points": -846.34,
+    "change_pct": -1.81,
+    "open": 46942.75,
+    "high": 47332.18,
+    "low": 46041.43,
+    "turnover_100m_twd": 8792.3,
+    "advancers": 254,
+    "decliners": 759,
+    "unchanged": 90,
+    "turnover_scope": "中央社集中市場收盤報導"
   },
   "institutions": {
-    "foreign_100m_twd": 9.6,
-    "investment_trust_100m_twd": 129.19,
-    "dealers_100m_twd": -133.11,
-    "total_100m_twd": 5.68,
-    "foreign_billion_twd": 0.96,
-    "investment_trust_billion_twd": 12.919,
-    "dealers_billion_twd": -13.311,
-    "total_billion_twd": 0.568,
-    "scope": "上市集中市場；10/21盤後；單位億新台幣",
-    "note": "指數反彈但外資淨買超僅9.60億元，不能將價格漲幅等同法人強勢"
+    "foreign_100m_twd": -816.56,
+    "investment_trust_100m_twd": 88.75,
+    "dealers_100m_twd": -273.78,
+    "total_100m_twd": -1001.59
   },
-  "usd_twd": null,
-  "usd_twd_status": "2026-10-21 正式收盤尚待確認；12:00 暫收32.510，不可當收盤",
-  "usd_twd_previous_close": 32.617,
-  "fx_usd_twd_noon": 32.51,
-  "fx_usd_twd_noon_note": "12:00午盤暫收，絕非10/21正式收盤",
   "tsmc": {
     "ticker": "2330",
-    "close": 2420,
-    "change_points": 15,
-    "change_pct": 0.62
+    "close": 2385,
+    "change_points": -35,
+    "change_pct": -1.45
   },
-  "stock_prices": [
-    {
-      "name": "台積電",
-      "ticker": "2330",
-      "close": 2420,
-      "change": 15,
-      "change_pct": 0.62
-    },
-    {
-      "name": "鴻海",
-      "ticker": "2317",
-      "close": 250,
-      "change": 8.5,
-      "change_pct": 3.52
-    },
-    {
-      "name": "聯發科",
-      "ticker": "2454",
-      "close": 4140,
-      "change": -10,
-      "change_pct": -0.24
-    },
-    {
-      "name": "台達電",
-      "ticker": "2308",
-      "close": 1625,
-      "change": 20,
-      "change_pct": 1.25
-    },
-    {
-      "name": "廣達",
-      "ticker": "2382",
-      "close": 328.5,
-      "change": 8,
-      "change_pct": 2.5
-    },
-    {
-      "name": "景碩",
-      "ticker": "3189",
-      "close": 1010,
-      "change": 65,
-      "change_pct": 6.88
-    }
-  ],
-  "major_stocks": [
-    {
-      "ticker": "2317",
-      "name": "鴻海",
-      "close": 250,
-      "change_points": 8.5,
-      "change_pct": 3.52
-    },
-    {
-      "ticker": "2454",
-      "name": "聯發科",
-      "close": 4140,
-      "change_points": -10,
-      "change_pct": -0.24
-    },
-    {
-      "ticker": "2308",
-      "name": "台達電",
-      "close": 1625,
-      "change_points": 20,
-      "change_pct": 1.25
-    },
-    {
-      "ticker": "2382",
-      "name": "廣達",
-      "close": 328.5,
-      "change_points": 8,
-      "change_pct": 2.5
-    },
-    {
-      "ticker": "3189",
-      "name": "景碩",
-      "close": 1010,
-      "change_points": 65,
-      "change_pct": 6.88
-    }
-  ],
-  "sector_details": [
-    {
-      "sector": "塑化",
-      "change_pct": 4.58,
-      "trend": "強勢"
-    },
-    {
-      "sector": "金融",
-      "change_pct": 2.55,
-      "trend": "相對強勢"
-    },
-    {
-      "sector": "機電",
-      "change_pct": 1.09,
-      "trend": "上漲"
-    },
-    {
-      "sector": "營建",
-      "change_pct": -0.16,
-      "trend": "小跌"
-    },
-    {
-      "sector": "造紙",
-      "change_pct": -0.33,
-      "trend": "下跌"
-    },
-    {
-      "sector": "AI／半導體",
-      "change_pct": null,
-      "trend": "分化",
-      "note": "個股漲跌並不一致；不推定整個產業指數"
-    }
-  ],
-  "strong_sectors": [
-    "塑化",
-    "金融",
-    "PCB／ABF（部分個股）"
-  ],
-  "weak_sectors": [
-    "營建",
-    "造紙",
-    "部分半導體及AI電子權值"
-  ],
+  "usd_twd": null,
+  "usd_twd_status": "10/22正式收盤待確認；午盤32.566不可當作正式收盤",
+  "fx_usd_twd_noon": 32.566,
   "risks": [
-    "指數反彈594.84點，但由盤中高點47,254.93回落至46,887.77點，未收復47,000整數關卡",
-    "外資買超9.60億元，三大法人合計買超5.68億元，法人資金確認度有限",
-    "台北匯市10/21正式收盤未核實，不以中午暫收值判斷匯率趨勢"
+    "指數收在當日最低點",
+    "上市下跌759家、上漲254家",
+    "外資賣超816.56億元"
   ],
-  "risk_signals": [
-    {
-      "factor": "價格與盤中收斂",
-      "level": "medium",
-      "color": "orange"
-    },
-    {
-      "factor": "外資買盤延續",
-      "level": "medium",
-      "color": "orange"
-    },
-    {
-      "factor": "產業輪動",
-      "level": "medium",
-      "color": "orange"
-    },
-    {
-      "factor": "USD/TWD正式收盤",
-      "level": "pending",
-      "color": "orange"
-    }
-  ],
-  "macro_events": [
-    {
-      "date": "2026-10-20",
-      "event": "台灣9月外銷訂單",
-      "orders_usd_100m": 1142.1,
-      "yoy_pct": 62.4,
-      "source_url": "https://www.cna.com.tw/news/afe/202610200208.aspx"
-    },
-    {
-      "date": "2026-10-14",
-      "event": "美國9月CPI已公布",
-      "yoy_pct": 3.7,
-      "source_url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
-    }
-  ],
-  "events": [
-    {
-      "date": "2026-10-22",
-      "importance": "medium",
-      "risk_color": "orange",
-      "event": "美國初領失業救濟金例行公布",
-      "source_url": "https://www.dol.gov/index.php/newsroom/releases",
-      "note": "確切時點以當週公告為準"
-    },
-    {
-      "date": "2026-10-23",
-      "importance": "high",
-      "risk_color": "red",
-      "event": "台灣9月工業生產及批零餐營業額",
-      "source_url": "https://www.moea.gov.tw/mns/dos/home/Home.aspx"
-    },
-    {
-      "date": "2026-10-26",
-      "importance": "low",
-      "risk_color": "green",
-      "event": "台股光復節補假休市",
-      "source_url": "https://accessibility.twse.com.tw/zh/trading/holiday.html"
-    },
-    {
-      "date": "2026-10-27",
-      "importance": "high",
-      "risk_color": "red",
-      "event": "美國FOMC會議首日（10/27–10/28）",
-      "source_url": "https://www.federalreserve.gov/monetarypolicy.htm"
-    },
-    {
-      "date": "2026-10-28",
-      "importance": "high",
-      "risk_color": "red",
-      "event": "美國FOMC利率決議",
-      "source_url": "https://www.federalreserve.gov/monetarypolicy.htm"
-    }
-  ],
-  "scenarios": {
-    "base": "指數於46,500～47,000附近，市場廣度改善，但外資買盤及正式匯率尚未同步確認",
-    "strengthening": [
-      "指數站穩47,000且成交結構改善",
-      "外資連續回補，不只單日小額買超",
-      "上漲家數延續擴大、電子與金融同步有量"
-    ],
-    "weakening": [
-      "指數回落46,500下方且下跌家數增加",
-      "外資再轉為大額賣超，正式匯率顯示台幣轉弱",
-      "台積電和主要權值股同步失守反彈區"
+  "next_trading_day": "2026-10-23",
+  "data_quality": {
+    "status": "沿用既有HTML草稿，未重新查證行情",
+    "unverified_fields": [
+      "USD/TWD正式收盤"
     ]
   },
-  "next_trading_day": "2026-10-22",
-  "watch_next": [
-    "47,000是否站穩且避免再次衝高回落",
-    "外資是否延續10/21買超9.60億元轉為連續回補",
-    "塑化4.58%與金融2.55%領漲是否向其他族群擴散",
-    "正式USD/TWD後續收盤能否與32.617比較",
-    "10/23工業生產及10/27–28FOMC前市場風險變化"
-  ],
-  "etf_long_term_risks": [
-    "市值型ETF可能過度集中半導體與少數大型權值股",
-    "高股息ETF同樣有產業集中、配息波動及淨值回撤",
-    "依投資期限、現金需求與跨市場配置評估曝險",
-    "不以單日反彈或配息率決定長期操作"
-  ],
-  "as_of": "2026-10-21T15:31:00+08:00",
-  "data_quality": {
-    "status": "採用已完成HTML草稿的已查證收盤資料，未重新整體查行情",
-    "unverified_fields": [
-      "10/21 USD/TWD正式匯市收盤"
-    ],
-    "notes": [
-      "匯率當日正式收盤尚未核實，未填入午盤值",
-      "成交值採中央社集中市場報導口徑，不與其他統計口徑混用",
-      "所有情境僅為條件式觀察，不是價格預測"
-    ],
-    "unit_notice": "*_100m_twd為億新台幣；*_billion_twd為十億新台幣"
-  },
-  "sources": [
-    {
-      "id": "S01",
-      "name": "中央社｜10/21 收盤指數、成交值、上漲下跌家數",
-      "url": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E5%8C%97%E8%82%A1%E5%B8%82-%E6%BC%B2594-84%E9%BB%9E-055601491.html",
-      "published_at": "2026/10/21 13:56 台北時間（中央社稿）"
-    },
-    {
-      "id": "S02",
-      "name": "中央社｜10/21 三大法人合計與分項",
-      "url": "https://www.cna.com.tw/news/afe/202610210165.aspx",
-      "published_at": "2026/10/21 15:07"
-    },
-    {
-      "id": "S03",
-      "name": "中央社｜科技、ABF、塑化與權值股收盤",
-      "url": "https://www.cna.com.tw/news/afe/202610210150.aspx",
-      "published_at": "2026/10/21 14:40；15:31 更新"
-    },
-    {
-      "id": "S04",
-      "name": "台視｜鴻海、廣達、台達電等權值股",
-      "url": "https://news.ttv.com.tw/news/11510210002000W",
-      "published_at": "2026/10/21 13:46"
-    },
-    {
-      "id": "S05",
-      "name": "中央社｜新台幣 10/21 午盤暫收（非正式收盤）",
-      "url": "https://www.cna.com.tw/news/afe/202610210092.aspx",
-      "published_at": "2026/10/21 12:06"
-    },
-    {
-      "id": "S06",
-      "name": "中央社｜新台幣 10/20 正式收盤 32.617",
-      "url": "https://www.cna.com.tw/list/axr.aspx",
-      "published_at": "2026/10/20 16:05（前交易日）"
-    },
-    {
-      "id": "S07",
-      "name": "經濟部統計處｜9 月外銷訂單、工業生產",
-      "url": "https://www.moea.gov.tw/mns/dos/home/Home.aspx",
-      "published_at": "2026/10/20 更新"
-    },
-    {
-      "id": "S08",
-      "name": "聯準會｜FOMC 2026/10/27–28 會議",
-      "url": "https://www.federalreserve.gov/monetarypolicy.htm",
-      "published_at": "官方會議日程"
-    },
-    {
-      "id": "S09",
-      "name": "臺灣證券交易所｜115 年集中市場開休市日",
-      "url": "https://accessibility.twse.com.tw/zh/trading/holiday.html",
-      "published_at": "2026 年度行事曆"
-    },
-    {
-      "id": "S10",
-      "name": "美國勞工統計局｜2026 年 10 月公布日程",
-      "url": "https://www.bls.gov/schedule/2026/",
-      "published_at": "官方公布日程"
-    },
-    {
-      "id": "S11",
-      "name": "中央社｜10/20 外銷訂單年增 62.4%",
-      "url": "https://www.cna.com.tw/news/afe/202610200208.aspx",
-      "published_at": "2026/10/20 16:08"
-    },
-    {
-      "id": "S12",
-      "name": "中央社｜10/21 47,000 點得而復失",
-      "url": "https://www.cna.com.tw/news/afe/202610210122.aspx",
-      "published_at": "2026/10/21 13:48；14:16 更新"
-    },
-    {
-      "id": "S13",
-      "name": "工業生產預定日｜9 月數據預計 10/23 發布",
-      "url": "https://tradingeconomics.com/taiwan/industrial-production",
-      "published_at": "10/23 預定，請以經濟部公告為準"
-    },
-    {
-      "id": "S14",
-      "name": "美國勞工統計局｜9 月 CPI 年增 3.7%",
-      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
-      "published_at": "2026/10/14 08:30 ET"
-    },
-    {
-      "id": "S15",
-      "name": "美國勞工部｜每週初領失業救濟金公告",
-      "url": "https://www.dol.gov/index.php/newsroom/releases",
-      "published_at": "例行每週公布；請以當週公告為準"
-    }
-  ]
+  "as_of": "2026-10-22T15:12:00+08:00"
 }
